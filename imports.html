@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="static/css/index-large.css" type="text/css" />
     <link rel="stylesheet" href="static/css/responsive.css" type="text/css" />
     <link rel="stylesheet" href="static/css/design.css" type="text/css" />
+
+    <script src="static/js/loader.js"></script>
+
 </head>
 
 <body>
@@ -21,18 +24,18 @@
             <a href="#"><img src="static/img/house-icon.png" class="icon oil"> <span class="oim">Home</span> <span class="ois">Home</span>
             </a>
         </li>
-        <li class="col-2"><a href="#">Class Attendance</a>
+        <li class="col-2"><a href="attendance.html">Class Attendance</a>
         </li>
         <li class="col-2"><a href="#">Class Availability</a>
         </li>
-        <li class="col-2"><a href="#">Faculty Schedule</a>
+        <li class="col-2"><a href="faculty-schedule.html">Faculty Schedule</a>
         </li>
-        <li class="col-2"><a href="#">Class Schedule</a>
+        <li class="col-2"><a href="class-schedule.html">Class Schedule</a>
         </li>
         <li class="col-2"><a href="#">Reports</a>
         </li>
         <li class="col-1">
-            <a href="#"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Submit Daily Attendance</span> <span class="ois">Submit Daily Attendance</span>
+            <a href="imports.html"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Import Information</span> <span class="ois">Import Information</span>
             </a>
         </li>
     </ul>
@@ -41,7 +44,7 @@
 <section class="row">
     <div class="container col-12 col-m-8 big" >
         <h1>IMPORTS</h1>
-        <span class="inline col-13 col-m-14 big">
+        <div class="inline col-13 col-m-14 big">
             <form method="post" enctype="multipart/form-data" >
                 <h1>Import Class</h1>
                 <input id="importFile" type="file" name="inputFile"/>
@@ -52,9 +55,13 @@
                 <input  type="text" id="urlId" />
                 <input class = "button sp-form" type="button" value="submit" onclick="importClassesFromURL()" />
             </form>
-        </span>
 
-        <span class="inline col-13 col-m-14 big">
+            <p id="importClassId" style="color: crimson">
+                Not yet imported !
+            </p>
+        </div>
+
+        <div class="inline col-13 col-m-14 big">
             <form method="post" enctype="multipart/form-data" >
                 <h1>Import Instructor</h1>
                 <input id="importFile1" type="file" name="inputFile"/>
@@ -65,8 +72,13 @@
                 <input  type="text" id="urlId1" />
                 <input class = "button sp-form" type="button" value="submit" onclick="importInstructorsFromURL()" />
             </form>
-        </span>
-        <span class="inline col-13 col-m-14 big">
+
+            <p id="importInstructorId" style="color: crimson">
+                Not yet imported !
+            </p>
+
+        </div>
+        <div class="inline col-13 col-m-14 big">
             <form  method="post" enctype="multipart/form-data" >
                 <h1>Import Schedule</h1>
                 <input id="importFile2" type="file" name="inputFile"/>
@@ -77,7 +89,11 @@
                 <input  type="text" id="urlId2" />
                 <input class = "button sp-form" type="button" value="submit" onclick="importSchedulesFromURL()" />
             </form>
-        </span>
+
+            <p id="importScheduleId" style="color: crimson">
+                Not yet imported !
+            </p>
+        </div>
 
         <div id="currentClassesID">
 

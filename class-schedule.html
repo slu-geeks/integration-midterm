@@ -3,136 +3,139 @@
 
 <head>
     <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check Attendance</title>
 
-    <link rel="stylesheet" href="static/css/index-small.css" type="text/css" />
-    <link rel="stylesheet" href="static/css/index-medium.css" type="text/css" />
-    <link rel="stylesheet" href="static/css/index-large.css" type="text/css" />
-    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" />
-    <link rel="stylesheet" href="static/css/design.css" type="text/css" />
-	<script src="static/js/classSchedule.js"></script>
+    <link rel="stylesheet" href="static/css/index-small.css" type="text/css"/>
+    <link rel="stylesheet" href="static/css/index-medium.css" type="text/css"/>
+    <link rel="stylesheet" href="static/css/index-large.css" type="text/css"/>
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css"/>
+    <link rel="stylesheet" href="static/css/design.css" type="text/css"/>
+    <script src="static/js/classSchedule.js"></script>
 </head>
 
 <body>
-	<!-- DISPLAY NAVIGATION ON TOP/SIDE ONLY ON TABLETS (oim = only in medium) OR ON MONITORS (oil = only in large) -->
-    <div class="row oim oil">
-        <ul class="nav col-12">
-            <li class="col-1">
-                <a href="#"><img src="static/img/house-icon.png" class="icon oil"> <span class="oim">Home</span> <span class="ois">Home</span>
-                </a>
-            </li>
-            <li class="col-2"><a href="#">Class Attendance</a>
-            </li>
-            <li class="col-2"><a href="#">Class Availability</a>
-            </li>
-            <li class="col-2"><a href="#">Faculty Schedule</a>
-            </li>
-            <li class="col-2"><a href="#">Class Schedule</a>
-            </li>
-            <li class="col-2"><a href="#">Reports</a>
-            </li>
-            <li class="col-1">
-                <a href="#"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Submit Daily Attendance</span> <span class="ois">Submit Daily Attendance</span>
-                </a>
-            </li>
-        </ul>
+<!-- DISPLAY NAVIGATION ON TOP/SIDE ONLY ON TABLETS (oim = only in medium) OR ON MONITORS (oil = only in large) -->
+<div class="row oim oil">
+    <ul class="nav col-12">
+        <li class="col-1">
+            <a href="#"><img src="static/img/house-icon.png" class="icon oil"> <span class="oim">Home</span> <span
+                    class="ois">Home</span>
+            </a>
+        </li>
+        <li class="col-2"><a href="attendance.html">Class Attendance</a>
+        </li>
+        <li class="col-2"><a href="#">Class Availability</a>
+        </li>
+        <li class="col-2"><a href="faculty-schedule.html">Faculty Schedule</a>
+        </li>
+        <li class="col-2"><a href="class-schedule.html">Class Schedule</a>
+        </li>
+        <li class="col-2"><a href="#">Reports</a>
+        </li>
+        <li class="col-1">
+            <a href="imports.html"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Import Information</span>
+                <span class="ois">Import Information</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<section class="row">
+    <div class="container col-m-12 col-m-8">
+        <div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
+            <form>
+                <input id="classCodeId" type="text" class="form" placeholder="Class Code">
+                <button name="submit" onclick="getClassSchedule();return false;" class="form button">Submit</button>
+            </form>
+        </div>
     </div>
+</section>
 
-	<section class="row">
-		<div class="container col-m-12 col-m-8">
-			<div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
-				<form>
-					<input id="classCodeId" type="text" class="form" placeholder="Class Code">
-					<button name="submit" onclick="getClassSchedule();return false;" class="form button">Submit</button>
-				</form>
-			</div>
-		</div>
-	</section>
+<section id="contentInformationId">
 
-	<section id="contentInformationId">
+</section>
 
-	</section>
+<section id="classScheduleId" class="row" hidden>
+    <div class="container col-12 col-m-8">
+        <div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
+            <img class="thumbnailClass" src="" width=200vw alt="">
+        </div>
+        <div class="header">
+            <div class="instructorNameId">
 
-	<section id="classScheduleId" class="row" hidden>
-		<div class="container col-12 col-m-8">
-			<div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
-				<img class="thumbnailClass" src="" width=200vw alt="">
-			</div>
-			<div class="header">
-				<div class="instructorNameId">
+            </div>
+            <div class="instructorBioId">
 
-				</div>
-				<div class="instructorBioId">
+            </div>
+        </div>
+        <table class="col-8 col-m-12">
+            <thead>
+            <tr>
+                <th class="head">Days Of The Week</th>
+                <td class="head">Schedule</td>
+            </tr>
+            </thead>
 
-				</div>
-			</div>
-			<table class="col-8 col-m-12">
-				<thead>
-				<tr>
-					<th class="head">Days Of The Week</th>
-					<td class="head">Schedule</td>
-				</tr>
-				</thead>
-
-				<tbody>
-				<tr>
-					<th scope="row">Monday</th>
-					<td class="tdMondayId"></td>
-				</tr>
-				<tr class="active">
-					<th scope="row">Tuesday</th>
-					<td class="tdTuesdayId"></td>
-				</tr>
-				<tr>
-					<th scope="row">Wednesday</th>
-					<td class="tdWednesdayId"></td>
-				</tr>
-				<tr>
-					<th scope="row">Thursday</th>
-					<td class="tdThursdayId"></td>
-				</tr>
-				<tr>
-					<th scope="row">Friday</th>
-					<td class="tdFridayId"></td>
-				</tr>
-				<tr>
-					<th scope="row">Saturday</th>
-					<td class="tdSaturdayId"></td>
-				</tr>
-				<tr>
-					<th scope="row">Sunday</th>
-					<td class="tdSundayId"></td>
-				</tr>
-				</tbody>
-			</table>
-		</div>
-	</section>
-	
-
-    
-	<!-- DISPLAY NAVIGATION IN THE BOTTOM (ois = only in small) ON PHONES -->
-    <div class="row ois"> 
-        <ul class="nav col-12">
-            <li class="col-1">
-                <a href="#"><img src="static/img/house-icon.png" class="icon oil"> <span class="oim">Home</span> <span class="ois">Home</span>
-                </a>
-            </li>
-            <li class="col-2"><a href="#">Class Attendance</a>
-            </li>
-            <li class="col-2"><a href="#">Class Availability</a>
-            </li>
-            <li class="col-2"><a href="#">Faculty Schedule</a>
-            </li>
-            <li class="col-2"><a href="#">Class Schedule</a>
-            </li>
-            <li class="col-2"><a href="#">Reports</a>
-            </li>
-            <li class="col-1">
-                <a href="#"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Submit Daily Attendance</span> <span class="ois">Submit Daily Attendance</span>
-                </a>
-            </li>
-        </ul>
+            <tbody>
+            <tr>
+                <th scope="row">Monday</th>
+                <td class="tdMondayId"></td>
+            </tr>
+            <tr class="active">
+                <th scope="row">Tuesday</th>
+                <td class="tdTuesdayId"></td>
+            </tr>
+            <tr>
+                <th scope="row">Wednesday</th>
+                <td class="tdWednesdayId"></td>
+            </tr>
+            <tr>
+                <th scope="row">Thursday</th>
+                <td class="tdThursdayId"></td>
+            </tr>
+            <tr>
+                <th scope="row">Friday</th>
+                <td class="tdFridayId"></td>
+            </tr>
+            <tr>
+                <th scope="row">Saturday</th>
+                <td class="tdSaturdayId"></td>
+            </tr>
+            <tr>
+                <th scope="row">Sunday</th>
+                <td class="tdSundayId"></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
+</section>
+
+
+<!-- DISPLAY NAVIGATION IN THE BOTTOM (ois = only in small) ON PHONES -->
+<div class="row ois">
+    <ul class="nav col-12">
+        <li class="col-1">
+            <a href="#"><img src="static/img/house-icon.png" class="icon oil"> <span class="oim">Home</span> <span
+                    class="ois">Home</span>
+            </a>
+        </li>
+        <li class="col-2"><a href="#">Class Attendance</a>
+        </li>
+        <li class="col-2"><a href="#">Class Availability</a>
+        </li>
+        <li class="col-2"><a href="#">Faculty Schedule</a>
+        </li>
+        <li class="col-2"><a href="#">Class Schedule</a>
+        </li>
+        <li class="col-2"><a href="#">Reports</a>
+        </li>
+        <li class="col-1">
+            <a href="#"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Submit Daily Attendance</span>
+                <span class="ois">Submit Daily Attendance</span>
+            </a>
+        </li>
+    </ul>
+</div>
 </body>
 </html>
