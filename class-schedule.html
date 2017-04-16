@@ -39,15 +39,12 @@
         </ul>
     </div>
 
-
-
-
 	<section class="row">
 		<div class="container col-m-12 col-m-8">
 			<div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
 				<form>
 					<input id="classCodeId" type="text" class="form" placeholder="Class Code">
-					<button name="submit" onclick="getClassSchedule()" class="form button">Submit</button>
+					<button name="submit" onclick="getClassSchedule();return false;" class="form button">Submit</button>
 				</form>
 			</div>
 		</div>
@@ -59,9 +56,15 @@
 
 	<section id="classScheduleId" class="row" hidden>
 		<div class="container col-12 col-m-8">
+			<div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
+				<img class="thumbnailClass" src="" width=200vw alt="">
+			</div>
 			<div class="header">
-				<div class="classScheduleNameId">
-					<p>Class Code Schedule</p>
+				<div class="instructorNameId">
+
+				</div>
+				<div class="instructorBioId">
+
 				</div>
 			</div>
 			<table class="col-8 col-m-12">
@@ -131,7 +134,5 @@
             </li>
         </ul>
     </div>
-
 </body>
-
 </html>

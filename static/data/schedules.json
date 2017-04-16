@@ -71,6 +71,16 @@
       "FK_instructor_id": "1352"
     },
     {
+      "PK_schedule_code": "9",
+      "class_code" : "3518",
+      "schedule_time_from": "12",
+      "schedule_time_to": "13",
+      "schedule_day": "Thursday",
+      "schedule_subject": "Webtech",
+      "FK_class_id": "2",
+      "FK_instructor_id": "1352"
+    },
+    {
       "PK_schedule_code": "8",
       "class_code" : "3519",
       "schedule_time_from": "09",

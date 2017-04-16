@@ -1,48 +1,46 @@
 /**
  * Created by mehdi on 4/17/17.
  */
-/**
- * Created by mehdi on 4/16/17.
- */
 //let contentElement = providedElement.cloneNode(true);
 function getClassSchedule() {
 
     document.getElementById("contentInformationId").innerHTML = "";
 
-    let classCode = document.getElementById("classCodeId").value;
+    let classCodeNumber = document.getElementById("classCodeId").value;
 
     let allScheduleJsonStr = localStorage.getItem("allSchedulesJson");
     let allScheduleJsonObject = JSON.parse(allScheduleJsonStr);
-    let allInstructorSchedules = JSON.parse('{"schedules" : []}');
+    let allSelectedSchedules = JSON.parse('{"schedules" : []}');
     for (let index in allScheduleJsonObject.schedules) {
         let eachSchedule = allScheduleJsonObject.schedules[index];
-        if (eachSchedule.FK_instructor_id == classCode) {
-            allInstructorSchedules['schedules'].push(eachSchedule);
+        if (eachSchedule.class_code == classCodeNumber) {
+            allSelectedSchedules['schedules'].push(eachSchedule);
         }
     }
 
-    allInstructorSchedules['schedules'].sort(sortByTime);
-    let mainDoc = document.getElementById("instructorScheduleId")
+    allSelectedSchedules['schedules'].sort(sortByTime);
+    let mainDoc = document.getElementById("classScheduleId")
     let contentElement = mainDoc.cloneNode(true);
+    let instructorId = allSelectedSchedules.schedules[0].FK_instructor_id;
 
-    for (let index in allInstructorSchedules.schedules) {
-        let eachInstructorSchedule = allInstructorSchedules.schedules[index];
+    for (let index in allSelectedSchedules.schedules) {
+        let eachSelectedSchedule = allSelectedSchedules.schedules[index];
 
-        let scheduleDay = eachInstructorSchedule.schedule_day;
+        let scheduleDay = eachSelectedSchedule.schedule_day;
         scheduleDay = capitalizeFirstLetter(scheduleDay.toLowerCase());
 
         let tdElement = contentElement.getElementsByClassName("td" + scheduleDay + "Id")[0];
 
-        let associatedClass = getClassById(eachInstructorSchedule.FK_class_id);
+        let associatedClass = getClassById(eachSelectedSchedule.FK_class_id);
 
         let elementContent = tdElement.innerHTML;
         if (elementContent == "") {
-            tdElement.innerText += associatedClass.room_no + ":[" + eachInstructorSchedule.schedule_time_from + " - " + eachInstructorSchedule.schedule_time_to + "]";
+            tdElement.innerText += associatedClass.room_no + ":[" + eachSelectedSchedule.schedule_time_from + " - " + eachSelectedSchedule.schedule_time_to + "]";
         } else {
-            tdElement.innerText += " - " + associatedClass.room_no + ":[" + eachInstructorSchedule.schedule_time_from + " - " + eachInstructorSchedule.schedule_time_to + "]";
+            tdElement.innerText += " - " + associatedClass.room_no + ":[" + eachSelectedSchedule.schedule_time_from + " - " + eachSelectedSchedule.schedule_time_to + "]";
         }
     }
-    setInstructorInfo(contentElement, classCode);
+    setInstructorInfo(contentElement, instructorId);
     contentElement.removeAttribute("hidden");
     document.getElementById("contentInformationId").appendChild(contentElement);
 }
@@ -81,22 +79,6 @@ function getClassById(classId) {
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-function setInstructorOptionList() {
-    let allInstructorJsonStr = localStorage.getItem('allInstructorsJson');
-    let allInstructorJsonObject = JSON.parse(allInstructorJsonStr);
-
-    let selectElement = document.getElementById("selectInstructorID");
-    for (let index in allInstructorJsonObject.instructors) {
-        let eachInstructor = allInstructorJsonObject.instructors[index];
-        let instructorId = eachInstructor.PK_instructor_idNo;
-        let instructorName = eachInstructor.instructor_name;
-        let option = document.createElement("option");
-        option.text = instructorName;
-        option.value = instructorId;
-        selectElement.add(option);
-    }
 }
 
 function setInstructorInfo(parentElement,instructorId) {
