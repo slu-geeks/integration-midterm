@@ -13,7 +13,7 @@
     <script src="static/js/schedule.js"></script>
 </head>
 
-<body onload="setInstructorList()">
+<body onload="setInstructorOptionList()">
 <!-- DISPLAY NAVIGATION ON TOP/SIDE ONLY ON TABLETS (oim = only in medium) OR ON MONITORS (oil = only in large) -->
 <div class="row oim oil">
     <ul class="nav col-12">
@@ -51,15 +51,22 @@
         </div>
     </div>
 </section>
+
+<section id="contentInformationId">
+
+</section>
+
 <section id="instructorScheduleId" class="row" hidden>
     <div class="container col-12 col-m-8">
-
+        <div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
+            <img class="thumbnailClass" src="" width=200vw alt="">
+        </div>
         <div class="header">
-            <div id="name">
-                InstructorName
+            <div class="instructorNameId">
+
             </div>
-            <div id="bio">
-                Biography of the Instructor
+            <div class="instructorBioId">
+
             </div>
         </div>
         <table class="col-8 col-m-12">
@@ -73,31 +80,31 @@
             <tbody>
             <tr>
                 <th scope="row">Monday</th>
-                <td id="tdMondayId"></td>
+                <td class="tdMondayId"></td>
             </tr>
             <tr class="active">
                 <th scope="row">Tuesday</th>
-                <td id="tdTuesdayId"></td>
+                <td class="tdTuesdayId"></td>
             </tr>
             <tr>
                 <th scope="row">Wednesday</th>
-                <td id="tdWednesdayId"></td>
+                <td class="tdWednesdayId"></td>
             </tr>
             <tr>
                 <th scope="row">Thursday</th>
-                <td id="tdThursdayId"></td>
+                <td class="tdThursdayId"></td>
             </tr>
             <tr>
                 <th scope="row">Friday</th>
-                <td id="tdFridayId"></td>
+                <td class="tdFridayId"></td>
             </tr>
             <tr>
                 <th scope="row">Saturday</th>
-                <td id="tdSaturdayId"></td>
+                <td class="tdSaturdayId"></td>
             </tr>
             <tr>
                 <th scope="row">Sunday</th>
-                <td id="tdSundayId"></td>
+                <td class="tdSundayId"></td>
             </tr>
             </tbody>
         </table>

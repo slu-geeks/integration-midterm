@@ -69,6 +69,7 @@ function fillContent(attendanceFullJson) {
 
         let thumbnailElement = contentElement.getElementsByClassName("thumbnailClass")[0];
         thumbnailElement.src = eachInstructor.picture_url;
+        thumbnailElement.alt = eachInstructor.instructor_name;
 
 
         let infoClassElement = contentElement.getElementsByClassName("infoClass")[0];
