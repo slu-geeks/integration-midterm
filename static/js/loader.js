@@ -109,7 +109,7 @@ function performImportInstructors(allInstructors){
         liAppender(eachInstructor.educational_level, instructorUL);
         liAppender(eachInstructor.instructor_birthday, instructorUL);
         liAppender(eachInstructor.instructor_email, instructorUL);
-        liAppender(eachInstructor.instructor_phoneNom, instructorUL);
+        liAppender(eachInstructor.instructor_phoneNum, instructorUL);
 
         nodeP.appendChild(instructorUL);
         document.getElementById("currentInstructorsID").appendChild(nodeP);

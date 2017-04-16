@@ -19,7 +19,7 @@
           "educational_level": "Master of Computer Engineering",
           "instructor_birthday": "1970-10-10",
           "instructor_email": "ali.mangaliang@gmail.com",
-          "instructor_phoneNom": "09063333333"
+          "instructor_phoneNum": "09063333333"
         },
         "class":{
           "PK_class_id": "s426",
