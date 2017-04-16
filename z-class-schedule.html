@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Attendance</title>
+
+    <link rel="stylesheet" href="static/css/index-small.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/index-medium.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/index-large.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/design.css" type="text/css" />
+</head>
+
+<body>
+	<!-- DISPLAY NAVIGATION ON TOP/SIDE ONLY ON TABLETS (oim = only in medium) OR ON MONITORS (oil = only in large) -->
+    <div class="row oim oil">
+        <ul class="nav col-12">
+            <li class="col-1">
+                <a href="#"><img src="static/img/house-icon.png" class="icon oil"> <span class="oim">Home</span> <span class="ois">Home</span>
+                </a>
+            </li>
+            <li class="col-2"><a href="#">Class Attendance</a>
+            </li>
+            <li class="col-2"><a href="#">Class Availability</a>
+            </li>
+            <li class="col-2"><a href="#">Faculty Schedule</a>
+            </li>
+            <li class="col-2"><a href="#">Class Schedule</a>
+            </li>
+            <li class="col-2"><a href="#">Reports</a>
+            </li>
+            <li class="col-1">
+                <a href="#"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Submit Daily Attendance</span> <span class="ois">Submit Daily Attendance</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+	
+	<section class="row">
+		<div class="container col-12 col-m-8">
+			<div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
+				<div>
+					<input type="text" class="form" placeholder="Class Code">
+				</div>
+				<div>
+					<input type="date" class="form-control" placeholder="choose your date">
+				</div>
+				<button class="form button" type="button">Go!</button>
+			</div>
+			<div class = "header">
+				<div id = "name">
+					Class Code Schedule
+				</div>
+			</div>
+			<table class="col-7 col-m-12">
+				<thead>
+					<tr>
+						<th class = "head">Days Of The Week</th>
+						<td class = "head">Schedule</td>
+					</tr>
+				</thead>
+
+
+				<tbody>
+					<tr>
+						<th scope="row">Monday</th>
+						<td>S423:[10 - 11] - S424:[11 - 12] - S424:[14 - 15:30]</td>
+					</tr>
+					<tr class="active">
+						<th scope="row">Tuesday</th>
+						<td>S423:[10 - 11] - S424:[11 - 12] - S424:[14 - 15:30]</td>
+					</tr>
+					<tr>
+						<th scope="row">Wednesday</th>
+						<td>S423:[10 - 11] - S424:[11 - 12] - S424:[14 - 15:30]</td>
+					</tr>
+					<tr>
+						<th scope="row">Thursday</th>
+						<td>S423:[10 - 11] - S424:[11 - 12] - S424:[14 - 15:30]</td>
+					</tr>
+					<tr>
+						<th scope="row">Friday</th>
+						<td>S423:[10 - 11] - S424:[11 - 12] - S424:[14 - 15:30]</td>
+					</tr>
+					<tr>
+						<th scope="row">Saturday</th>
+						<td>S423:[10 - 11] - S424:[11 - 12] - S424:[14 - 15:30]</td>
+					</tr>
+					<tr>
+						<th scope="row">Saturday</th>
+						<td>S423:[10 - 11] - S424:[11 - 12] - S424:[14 - 15:30]</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+		
+	</section>
+	
+
+    
+	<!-- DISPLAY NAVIGATION IN THE BOTTOM (ois = only in small) ON PHONES -->
+    <div class="row ois"> 
+        <ul class="nav col-12">
+            <li class="col-1">
+                <a href="#"><img src="static/img/house-icon.png" class="icon oil"> <span class="oim">Home</span> <span class="ois">Home</span>
+                </a>
+            </li>
+            <li class="col-2"><a href="#">Class Attendance</a>
+            </li>
+            <li class="col-2"><a href="#">Class Availability</a>
+            </li>
+            <li class="col-2"><a href="#">Faculty Schedule</a>
+            </li>
+            <li class="col-2"><a href="#">Class Schedule</a>
+            </li>
+            <li class="col-2"><a href="#">Reports</a>
+            </li>
+            <li class="col-1">
+                <a href="#"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Submit Daily Attendance</span> <span class="ois">Submit Daily Attendance</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

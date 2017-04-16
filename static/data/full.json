@@ -1,0 +1,33 @@
+{
+  "attendances": [
+    {
+      "schedule_date": "",
+      "schedule_state": "",
+      "schedule": {
+        "PK_schedule_code": "3512",
+        "schedule_time_from": "12",
+        "schedule_time_to": "13",
+        "schedule_day": "Friday",
+        "schedule_subject": "Webtech",
+
+        "instructor": {
+          "PK_instructor_idNo": "1349",
+          "instructor_name": "Sir Ali",
+          "picture_url": "http:\/\/www.google.com\/ali.mangaliang.jpg",
+          "instructor_title": "Sr",
+          "educational_level": "Master of Computer Engineering",
+          "instructor_birthday": "1970-10-10",
+          "instructor_email": "ali.mangaliang@gmail.com",
+          "instructor_phoneNom": "09063333333"
+        },
+        "class":{
+          "PK_class_id": "s426",
+          "room_no": "s426",
+          "instructor_id": "1",
+          "loc_X": "10",
+          "loc_Y": "30"
+        }
+      }
+    }
+  ]
+}

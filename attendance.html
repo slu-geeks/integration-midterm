@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance</title>
+    <link rel="stylesheet" href="static/css/index-small.css" type="text/css"/>
+    <link rel="stylesheet" href="static/css/index-medium.css" type="text/css"/>
+    <link rel="stylesheet" href="static/css/index-large.css" type="text/css"/>
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css"/>
+    <link rel="stylesheet" href="static/css/design.css" type="text/css"/>
+
+    <script type="text/javascript" src="static/js/attendance.js"></script>
+</head>
+<body onload="">
+<!-- DISPLAY NAVIGATION ON TOP/SIDE ONLY ON TABLETS (oim = only in medium) OR ON MONITORS (oil = only in large) -->
+<div class="row oim oil">
+    <ul class="nav col-12">
+        <li class="col-1">
+            <a href="#"><img src="static/img/house-icon.png" class="icon oil"> <span class="oim">Home</span> <span
+                    class="ois">Home</span>
+            </a>
+        </li>
+        <li class="col-2"><a href="#">Class Attendance</a>
+        </li>
+        <li class="col-2"><a href="#">Class Availability</a>
+        </li>
+        <li class="col-2"><a href="#">Faculty Schedule</a>
+        </li>
+        <li class="col-2"><a href="#">Class Schedule</a>
+        </li>
+        <li class="col-2"><a href="#">Reports</a>
+        </li>
+        <li class="col-1">
+            <a href="#"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Submit Daily Attendance</span>
+                <span class="ois">Submit Daily Attendance</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<section class="row">
+    <div class="container col-12 col-m-8 big">
+        <form>
+            <p>See all daily schedules?&nbsp;<input id="checkBoxId" type="checkbox"/></p>
+
+            <input class="button sp-form" type="button" value="Show" onclick="showAllAttendance()"/>
+        </form>
+        <div id="checkAttendanceId">
+        </div>
+    </div>
+</section>
+
+<section id="contentAttendance"></section>
+
+<section id="eachBlockScheduleId" hidden>
+    <section class="row">
+        <div class="container col-12 col-m-8">
+            <div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
+                <img class="thumbnailClass" src="" width=100vw alt="OBAMA">
+                <h1 class="infoClass"></h1>
+                <button id="submit" name="submit" class="form button">Submit</button>
+            </div>
+            <table class="col-7 col-m-12">
+                <thead>
+                <thead>
+                <tr>
+                    <th class = "head">Info</th>
+                    <td class = "head">Value</td>
+                </tr>
+                </thead>
+
+                <tr>
+                    <th>Code Number</th>
+                    <td class="classCodeNumberClass"></td>
+                </tr>
+                <tr>
+                    <th>Instructor</th>
+                    <td class="instructorNameClass"></td>
+                </tr>
+                <tr>
+                    <th>Subject</th>
+                    <td class="subjectNameClass"></td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                    <td class="dateNameClass"></td>
+                </tr>
+                <tr>
+                    <th>Time</th>
+                    <td class="timeClass"></td>
+                </tr>
+
+                <tr>
+                    <th>Attendance State</th>
+                    <td>
+                        <select name="Subject" class = "sp-form">
+                            <option selected = "selected" value="Webtech Lecture">Not checked</option>
+                            <option value="Webtech Laboratory">Absent</option>
+                            <option value="Integrative Programming">Present</option>
+                            <option value="Web System and Technologies">Late</option>
+                        </select>
+                    </td>
+
+                    </td>
+                </tr>
+                </thead>
+            </table>
+
+        </div>
+    </section>
+</section>
+
+
+<!-- DISPLAY NAVIGATION IN THE BOTTOM (ois = only in small) ON PHONES -->
+<div class="row ois">
+    <ul class="nav col-12">
+        <li class="col-1">
+            <a href="#"><img src="static/img/house-icon.png" class="icon oil"> <span class="oim">Home</span> <span
+                    class="ois">Home</span>
+            </a>
+        </li>
+        <li class="col-2"><a href="#">Class Attendance</a>
+        </li>
+        <li class="col-2"><a href="#">Class Availability</a>
+        </li>
+        <li class="col-2"><a href="#">Faculty Schedule</a>
+        </li>
+        <li class="col-2"><a href="#">Class Schedule</a>
+        </li>
+        <li class="col-2"><a href="#">Reports</a>
+        </li>
+        <li class="col-1">
+            <a href="#"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Submit Daily Attendance</span>
+                <span class="ois">Submit Daily Attendance</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

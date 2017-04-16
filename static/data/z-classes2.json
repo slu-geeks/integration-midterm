@@ -1,0 +1,52 @@
+{
+  "classes": [
+    {
+      "roomNo": "s426",
+      "codeNo": "9423",
+      "instructor": "Sir Ali",
+      "isTeacherAbsent" : "NO",
+      "subject": "integLec",
+      "location-X": "10",
+      "location-Y": "30",
+      "time": "12",
+      "day": "Friday",
+      "available" : "IS_NOT"
+    },
+    {
+      "roomNo": "s527",
+      "codeNo": "9413",
+      "instructor": "Sir Famorca",
+      "isTeacherAbsent" : "NO",
+      "subject": "Networks",
+      "location-X": "10",
+      "location-Y": "30",
+      "time": "10-11",
+      "day": "Wednesday",
+      "available" : ""
+    },
+    {
+      "roomNo": "s326",
+      "codeNo": "9426",
+      "instructor": "Sir Montes",
+      "isTeacherAbsent" : "NO",
+      "subject": "web-techLec",
+      "locX": "10",
+      "locY": "30",
+      "classTime": "2",
+      "day": "Monday",
+      "available" : ""
+    },
+    {
+      "roomNo": "s426",
+      "codeNo": "9413",
+      "instructor": "Maam Mendoza",
+      "isTeacherAbsent" : "NO",
+      "subject": "Tech Press",
+      "location-X": "10",
+      "location-Y": "30",
+      "time": "1",
+      "day": "Tuesday",
+      "available" : ""
+    }
+  ]
+}

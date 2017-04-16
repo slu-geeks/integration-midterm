@@ -1,0 +1,47 @@
+{
+  "schedule": [
+    {
+      "days" : "Monday",
+      "times" : "8:30 - 9:30",
+      "classes" : [
+        {
+          "classCode": "9423",
+          "subject" : "integLec",
+          "room": "s426",
+          "inNo": "1349",
+          "name": "Sir Ali"
+        },
+        {
+          "classCode": "9413",
+          "subject" : "Networks",
+          "room": "s527",
+          "inNo": "1425",
+          "name": "Sir Famorca"
+        }
+      ],
+      "times": "1:00 - 2:00" ,
+      "classes" : [
+        {
+          "classCode": "9426",
+          "subject" : "web-techLec",
+          "room": "s326",
+          "inNo": "1320",
+          "name": "Sir Montes"
+        }
+      ]
+    },{
+      "days" : "Wednesday",
+      "times " : "3:00 - 4:00" ,
+      "classes":[
+        {
+          "classCode": "9413",
+          "subject" : "Tech Press",
+          "room": "s426",
+          "inNo": "1369",
+          "name": "Maam Mendoza"
+        }
+        ]
+    }
+
+  ]
+}

@@ -1,0 +1,10 @@
+newest function idea:
+1. a function that will add on the schedule for reservation of the room. 
+	Ex: the checker must go and check the room that will be use for meeting of staff or certain events of student that is reserved. 
+	There will be a certain format to follow if added.
+	Add it also have an option if it is canceld or postpone.
+2. a search fuction that search for and instructor, the schedule of a room and others.
+
+3. Day report functionality will be added to track the absences of a instructors
+
+4. Sublist the json file based on the present time for the checker because he does not need to see the whole list of classes within his/her present time to check

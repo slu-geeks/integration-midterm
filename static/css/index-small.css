@@ -1,0 +1,67 @@
+@media only screen and (max-width: 768px) {
+	* {
+		font-size: 3vh !important;
+	}
+    /* For mobile phones: */
+    [class*="col-"] {
+        width: 100%;
+    }
+	
+	.oil {
+		display: none;
+	}
+	.oim {
+		display: none;
+	}
+	.ois {
+		display: initial;
+	}
+	
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+	}
+
+	li {
+		float: left;
+	}
+		
+	.container {
+		float: right;
+		text-align: center;
+		background-color:  #333;
+		color: white;
+		margin-bottom: 1vh;
+		padding: 2vh;
+	}
+	
+	li a {
+		display: block;
+		color: gray;
+		text-align: center;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		vertical-align: middle;
+		text-decoration: none;
+		font-size: 3vh;
+	}
+
+	li a:hover {
+		background-color: #111;
+	}
+
+	.active {
+		background-color: #4CAF50;
+	}
+	
+	.nav {
+		top: 100%;
+		position: initial;
+		margin-left: initial;
+		margin-top: initial;
+		margin-bottom: 1vh;
+	}
+}

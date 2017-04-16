@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance</title>
+    <script src="static/js/attendance.js"></script>
+    <script src="static/js/search.js"></script>
+</head>
+<body>
+
+
+<input id="searchInput" type="text" onkeyup="searchText()">
+
+<form method="post" enctype="multipart/form-data" >
+    <input id="importFile" type="file" name="inputFile"/>
+    <input type="button" value="submit" onclick="renderContent()" />
+</form>
+
+<div id="currentClassesID">
+
+</div>
+
+<p id="hiddenJson" hidden>
+
+</p>
+
+</body>
+</html>

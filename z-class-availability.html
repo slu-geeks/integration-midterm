@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Class-Availability</title>
+
+    <link rel="shortcut icon" href="static/img/scisicon.ico" type="image/png/ico">
+
+    <link rel="stylesheet" href="static/css/index-small.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/index-medium.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/index-large.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/design.css" type="text/css" />
+    <link href='//fonts.googleapis.com/css?family=Pangolin' rel='stylesheet'>
+
+
+</head>
+
+<body>
+    <ul class="nav col-12">
+        <li class="col-1">
+            <a href="#"><img src="static/img/house-icon.png" class="icon oil"> <span class="oim">Home</span> <span class="ois">Home</span>
+            </a>
+        </li>
+        <li class="col-2"><a href="#">Class Attendance</a>
+        </li>
+        <li class="col-2"><a href="#">Class Availability</a>
+        </li>
+        <li class="col-2"><a href="#">Faculty Schedule</a>
+        </li>
+        <li class="col-2"><a href="#">Class Schedule</a>
+        </li>
+        <li class="col-2"><a href="#">Reports</a>
+        </li>
+        <li class="col-1">
+            <a href="#"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Submit Daily Attendance</span> <span class="ois">Submit Daily Attendance</span>
+            </a>
+        </li>
+    </ul>
+
+    <section>
+
+        <!-- SECTION FOR 3RD FLOOR MAPPING-->
+        <section class="row">
+            <div class="container col-12 col-m-8">
+                <section class="col-3 col-m-8 s2s" style="margin : 10px 20px 0px 20px !important;">
+                    <div class="panel panel-default">
+
+                        <div style="text-align: center; margin: 10px;">
+                            <img id="floor1Id" class="floors" src="static/img/S3%20Silang.png" width="400" height="784" alt="pic" usemap="3rdFloorMap" onclick="">
+
+                            <map name="3rdFloorMap">
+                                <!-- Area map for 3rd Floor Diego Silang-->
+                                <!-- Area map for S324 , Math Department, Computer Applications Department, and SCIS Faculty Room, were not YET included -->
+                                <area shape="rect" coords="238, 79, 314, 185" alt="room s327" onclick="changeCoordinatorColor(event);return false;">
+                                <area shape="rect" coords="238, 193, 314, 394" alt="room s326" onclick="changeCoordinatorColor(event);return false;">
+                                <area shape="rect" coords="238, 402, 314, 615" alt="room dean's office" onclick="changeCoordinatorColor(event);return false;">
+                            </map>
+                        </div>
+                        <div class="panel-heading"><h1>Diego Silang 3rd Floor Mapping</h1></div>
+                    </div>
+                    </details>
+                </section>
+                <section class="col-3 col-m-8 s2s" style="margin : 10px 20px 0px 20px !important;">
+                    <div class="panel panel-default">
+
+                        <div style="text-align: center; margin: 10px;">
+                            <img id="floor2Id" class="floors" src="static/img/S4 Silang.png" width="400" height="784" alt="pic" usemap="4thFloorMap" onclick="">
+                            <map name="4thFloorMap">
+                                <!-- Area map for 4th Floor Diego Silang-->
+                                <area shape="rect" coords="56, 499, 143, 684" alt="room s421" onclick="changeCoordinatorColor(event);return false;">
+                                <area shape="rect" coords="56, 305, 143, 486" alt="room s422" onclick="changeCoordinatorColor(event);return false;">
+                                <area shape="rect" coords="56, 175, 143, 298" alt="room s423" onclick="changeCoordinatorColor(event);return false;">
+                                <area shape="rect" coords="240, 79, 313, 225" alt="room s425" onclick="changeCoordinatorColor(event);return false;">
+                                <area shape="rect" coords="240, 237, 313, 391" alt="room s426" onclick="changeCoordinatorColor(event);return false;">
+                                <area shape="rect" coords="240, 403, 313, 617" alt="room s427" onclick="changeCoordinatorColor(event);return false;">
+                            </map>
+                        </div>
+                        <div class="panel-heading"><h1>Diego Silang 4th Floor Mapping</h1></div>
+                    </div>
+                    </details>
+                </section>
+
+                <section class="col-3 col-m-8 s2s" style="margin : 10px 20px 0px 20px !important;">
+                    <div class="panel panel-default">
+
+                        <div style="text-align: center; margin: 10px;">
+                            <img id="floor3Id" class="floors" src="static/img/S5 Silang.png" width="400" height="784" alt="pic" usemap="5thFloorMap" onclick="">
+                            <map name="5thFloorMap">
+                                <!-- Area map for 5th Floor Diego Silang-->
+                                <area shape="rect" coords="57, 588, 144, 746" alt="room s521" onclick="changeCoordinatorColor(event);return false;">
+                                <area shape="rect" coords="57, 449, 144, 579" alt="room s522" onclick="changeCoordinatorColor(event);return false;">
+                                <area shape="rect" coords="57, 305, 144, 438" alt="room s523" onclick="changeCoordinatorColor(event);return false;">
+                                <area shape="rect" coords="57, 177, 144, 296" alt="room s524" onclick="changeCoordinatorColor(event);return false;">
+                                <area shape="rect" coords="239, 79, 314, 183" alt="room s525" onclick="changeCoordinatorColor(event);return false;">
+                                <area shape="rect" coords="239, 194, 314, 301" alt="room s526" onclick="changeCoordinatorColor(event);return false;">
+                                <area shape="rect" coords="239, 314, 314, 440" alt="room s527" onclick="changeCoordinatorColor(event);return false;">
+                                <area shape="rect" coords="239, 450, 314, 590" alt="room s528" onclick="changeCoordinatorColor(event);return false;">
+                            </map>
+                        </div>
+                        <div class="panel-heading"><h1>Diego Silang 5th Floor Mapping</h1></div>
+                    </div>
+                    </details>
+                </section>
+            </div>
+        </section>
+    </section>
+
+
+</body>
+
+</html>

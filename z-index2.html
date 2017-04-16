@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance</title>
+    <script src="attendance.js"></script>
+    <script src="search2.js"></script>
+    <style>
+        select, p {
+            width:250px;
+            margin: 10px;
+            text-align: center;
+
+        }
+        form{
+            margin-bottom: 50px;
+        }
+        button{
+            margin: 20px;
+        }
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            -webkit-animation-name: fadeIn; /* Fade in the background */
+            -webkit-animation-duration: 0.4s;
+            animation-name: fadeIn;
+            animation-duration: 0.4s
+        }
+        .modal-content {
+            margin:25%;
+            position: fixed;
+            bottom:0;
+            text-align: center;
+            background-color: #fefefe;
+            width: 50%;
+            -webkit-animation-name: slideIn;
+            -webkit-animation-duration: 0.4s;
+            animation-name: slideIn;
+            animation-duration: 0.4s;
+            border:solid;
+        }
+        @-webkit-keyframes fadeIn {
+            from {opacity: 0}
+            to {opacity: 1}
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0}
+            to {opacity: 1}
+        }
+
+    </style>
+</head>
+<body onload="myTimer()">
+<form method="post" enctype="multipart/form-data" >
+    <input id="importFile" type="file" name="inputFile"/>
+    <input type="button" value="submit" onclick="renderContent()" />
+</form>
+<h1>
+    <p id="date"></p>
+    <p id="time"></p>
+</h1>
+
+<br>
+<div id="button" >
+    <button id="s326" onclick="searchText(this.id)"><h1>S326</h1></button>
+    <button id="s329" onclick="searchText(this.id)"><h1>S329</h1></button>
+    <br>
+    <button id="s327" onclick="searchText(this.id)"><h1>S327</h1></button>
+    <button id="s330" onclick="searchText(this.id)"><h1>S330</h1></button>
+    <br>
+    <button id="s328" onclick="searchText(this.id)"><h1>S328</h1></button>
+    <button id="s331" onclick="searchText(this.id)"><h1>S331</h1></button>
+</div>
+<br>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <h1 id="modContent"></h1>
+    </div>
+</div>
+
+<p><button onclick="myFunction()">save</button>
+</p>
+
+<div id="currentClassesID">
+
+</div>
+
+<p id="hiddenJson" hidden>
+
+</p>
+
+</body>
+</html>

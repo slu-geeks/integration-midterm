@@ -1,0 +1,78 @@
+.icon {
+	width: 2vw;
+}
+
+body {
+	background-image: url('../img/home.png');
+	height: 100vh;
+	background-size: 100% 100%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+	font-size: 2.5vw;
+}
+
+p {
+	font-size: 2vw;
+}
+
+th, td {
+	font-size: 1.5vw;
+	padding: 1vw;
+}
+table{
+	margin-bottom: 2.5vw;
+	float: right;
+}
+
+.header {
+	margin-bottom: 2.5vw;
+}
+#name {
+	font-size: 3.5vw;
+}
+
+#bio {
+	font-size: 2.5vw;
+	color: gray;
+}
+.form {
+	font-size: 2.5vw;
+}
+
+.sp-form {
+	font-size: 1.5vw;
+}
+
+.big-form {
+	padding-left: 3vw;
+	font-size: 1.5vw;
+	text-align: left;
+}
+.head {
+	background-color: #4CAF50;
+    color: white;
+}
+
+.button {
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+	margin-top: 1vw;
+	margin-bottom: 1vw;
+}
+
+tr:nth-child(even) {background-color: #222222}
+
+thead {
+	margin-bottom: 2vh;
+}
+
+.big {
+	padding-top: 5vw;
+	padding-bottom: 5vw;
+}

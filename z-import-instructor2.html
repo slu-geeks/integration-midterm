@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Attendance</title>
+    <script src="static/js/imports.js"></script>
+
+    <link rel="stylesheet" href="static/css/index-small.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/index-medium.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/index-large.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/design.css" type="text/css" />
+</head>
+
+<body>
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Check Attendance</title>
+
+        <link rel="stylesheet" href="static/css/index-small.css" type="text/css" />
+        <link rel="stylesheet" href="static/css/index-medium.css" type="text/css" />
+        <link rel="stylesheet" href="static/css/index-large.css" type="text/css" />
+        <link rel="stylesheet" href="static/css/responsive.css" type="text/css" />
+        <link rel="stylesheet" href="static/css/design.css" type="text/css" />
+    </head>
+
+    <body onload="viewRegIns()">
+        <!-- DISPLAY NAVIGATION ON TOP/SIDE ONLY ON TABLETS (oim = only in medium) OR ON MONITORS (oil = only in large) -->
+        <div class="row oim oil">
+            <ul class="nav col-12">
+                <li class="col-1">
+                    <a href="#"><img src="static/img/house-icon.png" class="icon oil"> <span class="oim">Home</span> <span class="ois">Home</span>
+                    </a>
+                </li>
+                <li class="col-2"><a href="#">Class Attendance</a>
+                </li>
+                <li class="col-2"><a href="#">Class Availability</a>
+                </li>
+                <li class="col-2"><a href="#">Faculty Schedule</a>
+                </li>
+                <li class="col-2"><a href="#">Class Schedule</a>
+                </li>
+                <li class="col-2"><a href="#">Reports</a>
+                </li>
+                <li class="col-1">
+                    <a href="#"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Submit Daily Attendance</span> <span class="ois">Submit Daily Attendance</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <section class="row">
+            <div class="container col-12 col-m-8 big big-form">
+                <form id="importInstructorId" onsubmit="">
+                    <input class="sp-form" type="text" name="name" placeholder="Full Name" value="sss" />
+                    </p>
+                    <input class="sp-form" type="number" name="idNumber" placeholder="Id Number" value="123" />
+                    </p>
+                    <input class="sp-form" type="email" name="email" placeholder="Email" value="ix56@yahoo.com" />
+                    </p>
+                    <input class="sp-form" type="number" name="age" placeholder="Age" value="30" />
+                    </p>
+                    <input class="sp-form" type="text" name="title" placeholder="Title" value="Senior" />
+                    </p>
+                    <input class="sp-form" type="number" name="cellphoneNo1" placeholder="CellPhone No1" value="321321" />
+                    </p>
+                    <input class="sp-form" type="number" name="cellphoneNo2" placeholder="CellPhone No2" value="456456" />
+                    </p>
+                    <button class="sp-form button" id="addMore" name="add" onclick="addInstructor();return false;">Add more fields</button>
+                    <button class="sp-form button" id="submit" name="submit">Submit</button>
+
+                    <button class="sp-form button" id="clearLocalStorage" name="submit" onclick="removeLocalStorage();return false;">Clear local storage</button>
+                    <button class="sp-form button" name="submit" onclick="showLatestJson();return false;">Show updated json</button>
+                    </p>
+                    <a id="dataInstructorID" href="data:text/plainText,this is a string" download>download the updated JSON file</a> </p>
+
+                    <p id="demo"></p>
+
+                    <p id="printJson">
+
+                    </p>
+                </form>
+
+            </div>
+        </section>
+
+
+
+        <!-- DISPLAY NAVIGATION IN THE BOTTOM (ois = only in small) ON PHONES -->
+        <div class="row ois">
+            <ul class="nav col-12">
+                <li class="col-1">
+                    <a href="#"><img src="static/img/house-icon.png" class="icon oil"> <span class="oim">Home</span> <span class="ois">Home</span>
+                    </a>
+                </li>
+                <li class="col-2"><a href="#">Class Attendance</a>
+                </li>
+                <li class="col-2"><a href="#">Class Availability</a>
+                </li>
+                <li class="col-2"><a href="#">Faculty Schedule</a>
+                </li>
+                <li class="col-2"><a href="#">Class Schedule</a>
+                </li>
+                <li class="col-2"><a href="#">Reports</a>
+                </li>
+                <li class="col-1">
+                    <a href="#"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Submit Daily Attendance</span> <span class="ois">Submit Daily Attendance</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </body>
+
+    </html>
