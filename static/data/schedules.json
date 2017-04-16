@@ -5,7 +5,7 @@
       "class_code" : "3514",
       "schedule_time_from": "17",
       "schedule_time_to": "18",
-      "schedule_day": "Sunday",
+      "schedule_day": "Wednesday",
       "schedule_subject": "Webtech",
       "FK_class_id": "1",
       "FK_instructor_id": "1349"
@@ -15,17 +15,17 @@
       "class_code" : "3513",
       "schedule_time_from": "16",
       "schedule_time_to": "17",
-      "schedule_day": "Sunday",
+      "schedule_day": "Thursday",
       "schedule_subject": "Webtech",
       "FK_class_id": "1",
-      "FK_instructor_id": "1349"
+      "FK_instructor_id": "1355"
     },
     {
       "PK_schedule_code": "3",
       "class_code" : "3512",
       "schedule_time_from": "15",
       "schedule_time_to": "16",
-      "schedule_day": "Sunday",
+      "schedule_day": "Friday",
       "schedule_subject": "Webtech",
       "FK_class_id": "1",
       "FK_instructor_id": "1349"
@@ -38,17 +38,17 @@
       "schedule_day": "Monday",
       "schedule_subject": "Webtech",
       "FK_class_id": "1",
-      "FK_instructor_id": "1349"
+      "FK_instructor_id": "1356"
     },
     {
       "PK_schedule_code": "5",
       "class_code" : "3516",
       "schedule_time_from": "12",
       "schedule_time_to": "13",
-      "schedule_day": "Sunday",
+      "schedule_day": "Saturday",
       "schedule_subject": "Webtech",
       "FK_class_id": "1",
-      "FK_instructor_id": "1350"
+      "FK_instructor_id": "1355"
     },
     {
       "PK_schedule_code": "6",
@@ -58,7 +58,7 @@
       "schedule_day": "Monday",
       "schedule_subject": "Webtech",
       "FK_class_id": "2",
-      "FK_instructor_id": "1350"
+      "FK_instructor_id": "1354"
     },
     {
       "PK_schedule_code": "7",
@@ -68,7 +68,7 @@
       "schedule_day": "Monday",
       "schedule_subject": "Webtech",
       "FK_class_id": "2",
-      "FK_instructor_id": "1350"
+      "FK_instructor_id": "1352"
     },
     {
       "PK_schedule_code": "8",
@@ -78,7 +78,7 @@
       "schedule_day": "Monday",
       "schedule_subject": "Webtech",
       "FK_class_id": "2",
-      "FK_instructor_id": "1350"
+      "FK_instructor_id": "1351"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "instructors": [
     {
       "PK_instructor_idNo": "1349",
-      "instructor_name": "Sir Ali",
+      "instructor_name": "Mangaliag, Ronald Ali",
       "picture_url": "static\/img\/faculties\/MANGALIAG, RONALD ALI.jpg",
       "instructor_title": "Sr",
       "educational_level": "Master of Computer Engineering",
@@ -12,13 +12,69 @@
     },
     {
       "PK_instructor_idNo": "1350",
-      "instructor_name": "Sir Montes",
+      "instructor_name": "Montes, Joe",
       "picture_url": "static\/img\/faculties\/Joe Montes.jpg",
       "instructor_title": "Sr",
       "educational_level": "Master of Computer Engineering",
-      "instructor_birthday": "1970-10-10",
+      "instructor_birthday": "1974-12-10",
       "instructor_email": "montes@gmail.com",
       "instructor_phoneNum": "09064444444"
+    },
+    {
+      "PK_instructor_idNo": "1351",
+      "instructor_name": "Bacani, Bench",
+      "picture_url": "static\/img\/faculties\/BACANI, BENCH.jpg",
+      "instructor_title": "Sr",
+      "educational_level": "Master of Computer Systems",
+      "instructor_birthday": "1974-11-10",
+      "instructor_email": "bbacani@gmail.com",
+      "instructor_phoneNum": "09366381497"
+    },
+
+    {
+      "PK_instructor_idNo": "1352",
+      "instructor_name": "Balmeo, Laurence",
+      "picture_url": "static\/img\/faculties\/BALMEO, LAURENCE.jpg",
+      "instructor_title": "Sr",
+      "educational_level": "Master of Computer Systems",
+      "instructor_birthday": "1975-10-9",
+      "instructor_email": "lbalmeo@gmail.com",
+      "instructor_phoneNum": "093669013"
+    },
+
+    {
+      "PK_instructor_idNo": "1353",
+      "instructor_name": "Domantay, Randy",
+      "picture_url": "static\/img\/faculties\/DOMANTAY, RANDY.jpg",
+      "instructor_title": "Sr",
+      "educational_level": "Master of Computer Systems",
+      "instructor_birthday": "1973-10-6",
+      "instructor_email": "dRandy@gmail.com",
+      "instructor_phoneNum": "09064444143"
+    },
+
+    {
+      "PK_instructor_idNo": "1354",
+      "instructor_name": "Para, Jeff",
+      "picture_url": "static\/img\/faculties\/PARA, JEFF.jpg",
+      "instructor_title": "Sr",
+      "educational_level": "Master of Computer Systems",
+      "instructor_birthday": "1972-11-10",
+      "instructor_email": "pJeff@gmail.com",
+      "instructor_phoneNum": "09064444192"
+    },
+
+    {
+      "PK_instructor_idNo": "1355",
+      "instructor_name": "Ramirez, Jonathan",
+      "picture_url": "static\/img\/faculties\/RAMIREZ, JONATHAN.jpg",
+      "instructor_title": "Sr",
+      "educational_level": "Master of Computer Software",
+      "instructor_birthday": "1971-7-10",
+      "instructor_email": "rJonathan@gmail.com",
+      "instructor_phoneNum": "09064444100"
     }
+
+
   ]
 }

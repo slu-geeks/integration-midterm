@@ -3,14 +3,56 @@
     {
       "PK_class_id": "1",
       "room_no": "s426",
-      "instructor_id": "1",
+      "instructor_id": "1349",
       "loc_X": "10",
       "loc_Y": "30"
     },
     {
       "PK_class_id": "2",
       "room_no": "s427",
-      "instructor_id": "1",
+      "instructor_id": "1350",
+      "loc_X": "20",
+      "loc_Y": "40"
+    },
+    {
+      "PK_class_id": "3",
+      "room_no": "s427",
+      "instructor_id": "1351",
+      "loc_X": "20",
+      "loc_Y": "40"
+    },
+    {
+      "PK_class_id": "4",
+      "room_no": "s427",
+      "instructor_id": "1352",
+      "loc_X": "20",
+      "loc_Y": "40"
+    },
+    {
+      "PK_class_id": "5",
+      "room_no": "s427",
+      "instructor_id": "1353",
+      "loc_X": "20",
+      "loc_Y": "40"
+    },
+    {
+      "PK_class_id": "6",
+      "room_no": "s427",
+      "instructor_id": "1354",
+      "loc_X": "20",
+      "loc_Y": "40"
+    },
+    {
+      "PK_class_id": "7",
+      "room_no": "s427",
+      "instructor_id": "1355",
+      "loc_X": "20",
+      "loc_Y": "40"
+    },
+    {
+      "PK_class_id": "8",
+      "room_no": "s427",
+      "instructor_id": "1356",
       "loc_X": "20",
       "loc_Y": "40"
     }
