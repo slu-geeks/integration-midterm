@@ -16,8 +16,8 @@ function importClassesFromFile() {
 
 function importClassesFromURL() {
     // read text from URL location
-    var request = new XMLHttpRequest();
-    var urlStr = document.getElementById("urlId").value;
+    let request = new XMLHttpRequest();
+    let urlStr = document.getElementById("urlId").value;
     request.open('GET', urlStr, true);
     request.send(null);
     request.onreadystatechange = function () {
@@ -75,8 +75,8 @@ function importInstructorsFromFile() {
 
 function importInstructorsFromURL() {
     // read text from URL location
-    var request = new XMLHttpRequest();
-    var urlStr = document.getElementById("urlId").value;
+    let request = new XMLHttpRequest();
+    let urlStr = document.getElementById("urlId").value;
     request.open('GET', urlStr, true);
     request.send(null);
     request.onreadystatechange = function () {
@@ -135,8 +135,8 @@ function importSchedulesFromFile() {
 
 function importSchedulesFromURL() {
     // read text from URL location
-    var request = new XMLHttpRequest();
-    var urlStr = document.getElementById("urlId").value;
+    let request = new XMLHttpRequest();
+    let urlStr = document.getElementById("urlId").value;
     request.open('GET', urlStr, true);
     request.send(null);
     request.onreadystatechange = function () {

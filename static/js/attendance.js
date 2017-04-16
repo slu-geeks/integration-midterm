@@ -1,10 +1,9 @@
 /**
  * Created by mehdi on 4/14/17.
  */
-
 function showAllAttendance() {
 
-    document.getElementById("checkAttendanceId").innerHTML = "";
+    document.getElementById("contentAttendance").innerHTML = "";
 
     var dailyAttendanceFullList = createDailyAttendance();
     dailyAttendanceFullList = sortAttendanceList(dailyAttendanceFullList);
@@ -37,7 +36,7 @@ function subAttendanceBasedOnCurrentTime(attendanceFullJson) {
         let startTime = getTime(eachSchedule.schedule_time_from);
         let endTime = getTime(eachSchedule.schedule_time_to);
 
-        if (currentTime > startTime && currentTime < endTime){
+        if (currentTime > startTime && currentTime < endTime) {
             subListAttendance['attendances'].push(eachAttendance);
         }
     }
@@ -45,10 +44,10 @@ function subAttendanceBasedOnCurrentTime(attendanceFullJson) {
     return subListAttendance;
 }
 
-function getTime(strTime){
-    if(!strTime.includes(":")){
+function getTime(strTime) {
+    if (!strTime.includes(":")) {
         strTime = strTime + ":00:00";
-    }else {
+    } else {
         strTime += ":00"
     }
 
@@ -85,19 +84,55 @@ function fillContent(attendanceFullJson) {
         subjectElement.appendChild(document.createTextNode(eachSchedule.schedule_subject));
 
         let dateElement = contentElement.getElementsByClassName("dateNameClass")[0];
-        let attendanceDate = new Date(eachAttendance.schedule_date);
+        let attendanceDate = new Date(eachAttendance.attendance_date);
         dateElement.appendChild(document.createTextNode(attendanceDate));
 
         let timeElement = contentElement.getElementsByClassName("timeClass")[0];
         // attendanceDate.getHours() + ":" + attendanceDate.getMinutes()
         timeElement.appendChild(document.createTextNode(eachSchedule.schedule_time_from + " to " + eachSchedule.schedule_time_to));
         allAttendances.push(contentElement);
+
+
+        let submitElement = contentElement.getElementsByClassName("submitAttendanceClass")[0];
+        submitElement.dataset.attendanceId = eachAttendance.PK_attendance_id;
+
+        contentElement.setAttribute("id", eachAttendance.PK_attendance_id);
+
     }
 
     for (let index in allAttendances) {
         document.getElementById("contentAttendance").appendChild(allAttendances[index]);
     }
 
+}
+
+
+function submitAttendance(attendance) {
+
+    let newDate = new Date();
+    let dailyScheduleName = newDate.getYear() + "-" + newDate.getMonth() + "-" + newDate.getDay();
+
+    let attendanceId = attendance.getAttribute("data-attendance-id");
+
+    let dayAttendanceJsonStr = localStorage.getItem(dailyScheduleName);
+    let dayAttendanceJsonObject = JSON.parse(dayAttendanceJsonStr);
+
+    for (let index in dayAttendanceJsonObject.attendances) {
+        let eachAttendance = dayAttendanceJsonObject.attendances[index];
+        let eachAttendanceIdNo = eachAttendance.PK_attendance_id;
+
+        if (attendanceId == eachAttendanceIdNo) {
+            let mainSelection = document.getElementById(attendanceId);
+            let selectElement = mainSelection.getElementsByClassName("selectFormClass")[0];
+            let text = selectElement.options[selectElement.selectedIndex].text;
+
+            eachAttendance.attendance_state = text;
+            alert("you successfully change the state to: " + text);
+            let strJson = JSON.stringify(dayAttendanceJsonObject, null, 4);
+            localStorage.setItem(dailyScheduleName, strJson);
+            return;
+        }
+    }
 }
 
 
@@ -129,15 +164,16 @@ function createDailyAttendance() {
 
         if (scheduleDay == day) {
             let jsonString = "";
-            jsonString = jsonString.concat('{"schedule_date": "' + newDate + '",');
-            jsonString = jsonString.concat('"schedule_state": "NOT_CHECKED",');
+            jsonString = jsonString.concat('{"PK_attendance_id": "' + newDate + '---' + index + '",');
+            jsonString = jsonString.concat('"attendance_date": "' + newDate + '",');
+            jsonString = jsonString.concat('"attendance_state": "NOT_CHECKED",');
             jsonString = jsonString.concat('"FK_schedule_id": "' + eachSchedule.PK_schedule_code + '"}');
             dayAttendanceJsonObject['attendances'].push(JSON.parse(jsonString));
         }
     }
 
     let dailyAttendanceStrList = JSON.stringify(dayAttendanceJsonObject, null, 4);
-    localStorage.setItem(dailyAttendanceStrList, dayAttendanceJsonObject);
+    localStorage.setItem(dailyScheduleName, dailyAttendanceStrList);
 
     /*
 

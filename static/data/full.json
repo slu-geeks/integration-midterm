@@ -1,8 +1,9 @@
 {
   "attendances": [
     {
-      "schedule_date": "",
-      "schedule_state": "",
+      "PK_attendance_id" : "",
+      "attendance_date": "",
+      "attendance_state": "",
       "schedule": {
         "PK_schedule_code": "3512",
         "schedule_time_from": "12",

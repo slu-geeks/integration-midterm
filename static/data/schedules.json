@@ -2,8 +2,8 @@
   "schedules": [
     {
       "PK_schedule_code": "3512",
-      "schedule_time_from": "12",
-      "schedule_time_to": "13",
+      "schedule_time_from": "15",
+      "schedule_time_to": "16",
       "schedule_day": "Sunday",
       "schedule_subject": "Webtech",
       "FK_class_id" : "1",
@@ -11,8 +11,8 @@
     },
     {
       "PK_schedule_code": "3513",
-      "schedule_time_from": "13",
-      "schedule_time_to": "14",
+      "schedule_time_from": "16",
+      "schedule_time_to": "17",
       "schedule_day": "Sunday",
       "schedule_subject": "Webtech",
       "FK_class_id" : "1",
@@ -20,8 +20,8 @@
     },
     {
       "PK_schedule_code": "3514",
-      "schedule_time_from": "14",
-      "schedule_time_to": "15",
+      "schedule_time_from": "17",
+      "schedule_time_to": "18",
       "schedule_day": "Sunday",
       "schedule_subject": "Webtech",
       "FK_class_id" : "1",
@@ -29,8 +29,8 @@
     },
     {
       "PK_schedule_code": "3515",
-      "schedule_time_from": "15",
-      "schedule_time_to": "16",
+      "schedule_time_from": "16",
+      "schedule_time_to": "17",
       "schedule_day": "Monday",
       "schedule_subject": "Webtech",
       "FK_class_id" : "1",

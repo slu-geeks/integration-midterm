@@ -45,8 +45,6 @@
 
             <input class="button sp-form" type="button" value="Show" onclick="showAllAttendance()"/>
         </form>
-        <div id="checkAttendanceId">
-        </div>
     </div>
 </section>
 
@@ -58,7 +56,7 @@
             <div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
                 <img class="thumbnailClass" src="" width=100vw alt="OBAMA">
                 <h1 class="infoClass"></h1>
-                <button id="submit" name="submit" class="form button">Submit</button>
+                <button data-attendance-id="" name="submit" onclick="submitAttendance(this)" class="form button submitAttendanceClass">Submit</button>
             </div>
             <table class="col-7 col-m-12">
                 <thead>
@@ -93,7 +91,7 @@
                 <tr>
                     <th>Attendance State</th>
                     <td>
-                        <select name="Subject" class = "sp-form">
+                        <select name="Subject" class = "sp-form selectFormClass">
                             <option selected = "selected" value="Webtech Lecture">Not checked</option>
                             <option value="Webtech Laboratory">Absent</option>
                             <option value="Integrative Programming">Present</option>
