@@ -73,7 +73,19 @@
       "instructor_birthday": "1971-7-10",
       "instructor_email": "rJonathan@gmail.com",
       "instructor_phoneNum": "09064444100"
+    },
+
+    {
+      "PK_instructor_idNo": "1356",
+      "instructor_name": "Nana, Ria Andrea",
+      "picture_url": "static\/img\/faculties\/RAMIREZ, JONATHAN.jpg",
+      "instructor_title": "Sr",
+      "educational_level": "Master of Computer Software",
+      "instructor_birthday": "1975-9-12",
+      "instructor_email": "RiaNana@gmail.com",
+      "instructor_phoneNum": "09215789520"
     }
+
 
 
   ]
