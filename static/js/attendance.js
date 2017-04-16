@@ -98,6 +98,15 @@ function fillContent(attendanceFullJson) {
 
         contentElement.setAttribute("id", eachAttendance.PK_attendance_id);
 
+        let mySelect = contentElement.getElementsByClassName("selectFormClass")[0];
+
+
+        for(let i = 0; i < mySelect.options.length; i++){
+            if(mySelect.options[i].value == eachAttendance.attendance_state){
+                mySelect.selectedIndex = i;
+                break;
+            }
+        }
     }
 
     for (let index in allAttendances) {
