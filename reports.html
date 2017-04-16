@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check Attendance</title>
-
+    <title>Attendance</title>
     <link rel="stylesheet" href="static/css/index-small.css" type="text/css"/>
     <link rel="stylesheet" href="static/css/index-medium.css" type="text/css"/>
     <link rel="stylesheet" href="static/css/index-large.css" type="text/css"/>
     <link rel="stylesheet" href="static/css/responsive.css" type="text/css"/>
     <link rel="stylesheet" href="static/css/design.css" type="text/css"/>
-    <script src="static/js/classSchedule.js"></script>
-</head>
 
+    <script type="text/javascript" src="static/js/attendance.js"></script>
+</head>
 <body>
 <!-- DISPLAY NAVIGATION ON TOP/SIDE ONLY ON TABLETS (oim = only in medium) OR ON MONITORS (oil = only in large) -->
 <div class="row oim oil">
@@ -40,73 +37,73 @@
 </div>
 
 <section class="row">
-    <div class="container col-m-12 col-m-8">
-        <div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
-            <form>
-                <input id="classCodeId" type="text" class="form" placeholder="Class Code">
-                <button name="submit" onclick="getClassSchedule();return false;" class="form button">Submit</button>
-            </form>
-        </div>
+    <div class="container col-12 col-m-8 big">
+        <form>
+            <p>See all daily schedules?&nbsp;<input id="checkBoxId" type="checkbox"/></p>
+
+            <input class="button sp-form" type="button" value="Show" onclick="showAllAttendance()"/>
+        </form>
     </div>
 </section>
 
-<section id="contentInformationId">
+<section id="contentAttendance"></section>
 
-</section>
-
-<section id="classScheduleId" class="row" hidden>
-    <div class="container col-12 col-m-8">
-        <div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
-            <img class="thumbnailClass" src="" width=200vw alt="">
-        </div>
-        <div class="header">
-            <div class="instructorNameId">
-
+<section id="eachBlockScheduleId" hidden>
+    <section class="row">
+        <div class="container col-12 col-m-8">
+            <div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
+                <img class="thumbnailClass" src="" width=100vw alt="">
+                <h1 class="infoClass"></h1>
+                <button data-attendance-id="" name="submit" onclick="submitAttendance(this)" class="form button submitAttendanceClass">Submit</button>
             </div>
-            <div class="instructorBioId">
+            <table class="col-7 col-m-12">
+                <thead>
+                <thead>
+                <tr>
+                    <th class = "head">Info</th>
+                    <td class = "head">Value</td>
+                </tr>
+                </thead>
 
-            </div>
+                <tr>
+                    <th>Code Number</th>
+                    <td class="classCodeNumberClass"></td>
+                </tr>
+                <tr>
+                    <th>Instructor</th>
+                    <td class="instructorNameClass"></td>
+                </tr>
+                <tr>
+                    <th>Subject</th>
+                    <td class="subjectNameClass"></td>
+                </tr>
+                <tr>
+                    <th>Date</th>
+                    <td class="dateNameClass"></td>
+                </tr>
+                <tr>
+                    <th>Time</th>
+                    <td class="timeClass"></td>
+                </tr>
+
+                <tr>
+                    <th>Attendance State</th>
+                    <td>
+                        <select name="Subject" class = "sp-form selectFormClass">
+                            <option selected = "selected" value="Not checked">Not checked</option>
+                            <option value="Absent">Absent</option>
+                            <option value="Present">Present</option>
+                            <option value="Late">Late</option>
+                        </select>
+                    </td>
+
+                    </td>
+                </tr>
+                </thead>
+            </table>
+
         </div>
-        <table class="col-8 col-m-12">
-            <thead>
-            <tr>
-                <th class="head">Days Of The Week</th>
-                <td class="head">Schedule</td>
-            </tr>
-            </thead>
-
-            <tbody>
-            <tr>
-                <th scope="row">Monday</th>
-                <td class="tdMondayId"></td>
-            </tr>
-            <tr class="active">
-                <th scope="row">Tuesday</th>
-                <td class="tdTuesdayId"></td>
-            </tr>
-            <tr>
-                <th scope="row">Wednesday</th>
-                <td class="tdWednesdayId"></td>
-            </tr>
-            <tr>
-                <th scope="row">Thursday</th>
-                <td class="tdThursdayId"></td>
-            </tr>
-            <tr>
-                <th scope="row">Friday</th>
-                <td class="tdFridayId"></td>
-            </tr>
-            <tr>
-                <th scope="row">Saturday</th>
-                <td class="tdSaturdayId"></td>
-            </tr>
-            <tr>
-                <th scope="row">Sunday</th>
-                <td class="tdSundayId"></td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
+    </section>
 </section>
 
 
