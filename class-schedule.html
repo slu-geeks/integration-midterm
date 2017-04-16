@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="static/css/index-large.css" type="text/css" />
     <link rel="stylesheet" href="static/css/responsive.css" type="text/css" />
     <link rel="stylesheet" href="static/css/design.css" type="text/css" />
+	<script src="static/js/classSchedule.js"></script>
 </head>
 
 <body>
@@ -37,66 +38,72 @@
             </li>
         </ul>
     </div>
-	
+
+
+
+
 	<section class="row">
-		<div class="container col-12 col-m-8">
+		<div class="container col-m-12 col-m-8">
 			<div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
-				<div>
-					<input type="text" class="form" placeholder="Class Code">
-				</div>
-				<div>
-					<input type="date" class="form-control" placeholder="choose your date">
-				</div>
-				<button class="form button" type="button">Go!</button>
+				<form>
+					<input id="classCodeId" type="text" class="form" placeholder="Class Code">
+					<button name="submit" onclick="getClassSchedule()" class="form button">Submit</button>
+				</form>
 			</div>
-			<div class = "header">
-				<div id = "name">
-					Class Code Schedule
+		</div>
+	</section>
+
+	<section id="contentInformationId">
+
+	</section>
+
+	<section id="classScheduleId" class="row" hidden>
+		<div class="container col-12 col-m-8">
+			<div class="header">
+				<div class="classScheduleNameId">
+					<p>Class Code Schedule</p>
 				</div>
 			</div>
-			<table class="col-7 col-m-12">
+			<table class="col-8 col-m-12">
 				<thead>
-					<tr>
-						<th class = "head">Days Of The Week</th>
-						<td class = "head">Schedule</td>
-					</tr>
+				<tr>
+					<th class="head">Days Of The Week</th>
+					<td class="head">Schedule</td>
+				</tr>
 				</thead>
 
-
 				<tbody>
-					<tr>
-						<th scope="row">Monday</th>
-						<td>S423:[10 - 11] - S424:[11 - 12] - S424:[14 - 15:30]</td>
-					</tr>
-					<tr class="active">
-						<th scope="row">Tuesday</th>
-						<td>S423:[10 - 11] - S424:[11 - 12] - S424:[14 - 15:30]</td>
-					</tr>
-					<tr>
-						<th scope="row">Wednesday</th>
-						<td>S423:[10 - 11] - S424:[11 - 12] - S424:[14 - 15:30]</td>
-					</tr>
-					<tr>
-						<th scope="row">Thursday</th>
-						<td>S423:[10 - 11] - S424:[11 - 12] - S424:[14 - 15:30]</td>
-					</tr>
-					<tr>
-						<th scope="row">Friday</th>
-						<td>S423:[10 - 11] - S424:[11 - 12] - S424:[14 - 15:30]</td>
-					</tr>
-					<tr>
-						<th scope="row">Saturday</th>
-						<td>S423:[10 - 11] - S424:[11 - 12] - S424:[14 - 15:30]</td>
-					</tr>
-					<tr>
-						<th scope="row">Saturday</th>
-						<td>S423:[10 - 11] - S424:[11 - 12] - S424:[14 - 15:30]</td>
-					</tr>
+				<tr>
+					<th scope="row">Monday</th>
+					<td class="tdMondayId"></td>
+				</tr>
+				<tr class="active">
+					<th scope="row">Tuesday</th>
+					<td class="tdTuesdayId"></td>
+				</tr>
+				<tr>
+					<th scope="row">Wednesday</th>
+					<td class="tdWednesdayId"></td>
+				</tr>
+				<tr>
+					<th scope="row">Thursday</th>
+					<td class="tdThursdayId"></td>
+				</tr>
+				<tr>
+					<th scope="row">Friday</th>
+					<td class="tdFridayId"></td>
+				</tr>
+				<tr>
+					<th scope="row">Saturday</th>
+					<td class="tdSaturdayId"></td>
+				</tr>
+				<tr>
+					<th scope="row">Sunday</th>
+					<td class="tdSundayId"></td>
+				</tr>
 				</tbody>
 			</table>
 		</div>
-	</section>
-		
 	</section>
 	
 

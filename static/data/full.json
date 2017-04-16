@@ -6,6 +6,7 @@
       "attendance_state": "",
       "schedule": {
         "PK_schedule_code": "3512",
+        "class_code" : "3514",
         "schedule_time_from": "12",
         "schedule_time_to": "13",
         "schedule_day": "Friday",
