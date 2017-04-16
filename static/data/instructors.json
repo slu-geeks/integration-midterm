@@ -30,7 +30,6 @@
       "instructor_email": "bbacani@gmail.com",
       "instructor_phoneNum": "09366381497"
     },
-
     {
       "PK_instructor_idNo": "1352",
       "instructor_name": "Balmeo, Laurence",
@@ -41,7 +40,6 @@
       "instructor_email": "lbalmeo@gmail.com",
       "instructor_phoneNum": "093669013"
     },
-
     {
       "PK_instructor_idNo": "1353",
       "instructor_name": "Domantay, Randy",
@@ -52,7 +50,6 @@
       "instructor_email": "dRandy@gmail.com",
       "instructor_phoneNum": "09064444143"
     },
-
     {
       "PK_instructor_idNo": "1354",
       "instructor_name": "Para, Jeff",
@@ -63,7 +60,6 @@
       "instructor_email": "pJeff@gmail.com",
       "instructor_phoneNum": "09064444192"
     },
-
     {
       "PK_instructor_idNo": "1355",
       "instructor_name": "Ramirez, Jonathan",
@@ -73,8 +69,16 @@
       "instructor_birthday": "1971-7-10",
       "instructor_email": "rJonathan@gmail.com",
       "instructor_phoneNum": "09064444100"
+    },
+    {
+      "PK_instructor_idNo": "1356",
+      "instructor_name": "NANA, RIA ANDREA",
+      "picture_url": "static\/img\/faculties\/NANA, RIA ANDREA.jpg",
+      "instructor_title": "Sr",
+      "educational_level": "Master of Computer Software",
+      "instructor_birthday": "1971-7-10",
+      "instructor_email": "Ria@gmail.com",
+      "instructor_phoneNum": "09064488410"
     }
-
-
   ]
 }

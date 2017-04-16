@@ -163,6 +163,7 @@ function performImportSchedules(allSchedules){
         scheduleUL.setAttribute("schedule", "schoolScheduleUL");
 
         liAppender(eachSchedule.PK_schedule_code, scheduleUL);
+        liAppender(eachSchedule.class_code, scheduleUL);
         liAppender(eachSchedule.schedule_time_from, scheduleUL);
         liAppender(eachSchedule.schedule_time_to, scheduleUL);
         liAppender(eachSchedule.schedule_day, scheduleUL);
