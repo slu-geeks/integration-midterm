@@ -40,7 +40,7 @@ function performImportClasses(allClasses){
 }
 
 function importInstructorsFromFile() {
-    let file = document.getElementById('importFile');
+    let file = document.getElementById('importFile1');
 
     if (file.files.length) {
         let reader = new FileReader();
@@ -58,7 +58,7 @@ function importInstructorsFromFile() {
 function importInstructorsFromURL() {
     // read text from URL location
     let request = new XMLHttpRequest();
-    let urlStr = document.getElementById("urlId").value;
+    let urlStr = document.getElementById("urlId1").value;
     request.open('GET', urlStr, true);
     request.send(null);
     request.onreadystatechange = function () {
@@ -81,7 +81,7 @@ function performImportInstructors(allInstructors){
 }
 
 function importSchedulesFromFile() {
-    let file = document.getElementById('importFile');
+    let file = document.getElementById('importFile2');
 
     if (file.files.length) {
         let reader = new FileReader();
@@ -98,7 +98,7 @@ function importSchedulesFromFile() {
 function importSchedulesFromURL() {
     // read text from URL location
     let request = new XMLHttpRequest();
-    let urlStr = document.getElementById("urlId").value;
+    let urlStr = document.getElementById("urlId2").value;
     request.open('GET', urlStr, true);
     request.send(null);
     request.onreadystatechange = function () {
