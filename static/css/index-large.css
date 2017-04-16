@@ -61,6 +61,12 @@
 		margin-bottom: 1vh;
 		font-size: 1.75vw !important;
 	}
+	.inline{
+		display: inline-block;
+		padding:2vh ;
+		border:solid;
+		margin-bottom: 2px;
+	}
 	
     /* For desktop: */
     .col-1 {width: 8.33%;}
@@ -75,4 +81,10 @@
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+	.col-13 {width: 30%;}
+	.col-14 {width: 99%;}
+
+
 }
+
+
