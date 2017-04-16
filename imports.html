@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>import</title>
+
+    <link rel="stylesheet" href="static/css/index-small.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/index-medium.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/index-large.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="static/css/design.css" type="text/css" />
+</head>
+
+<body>
+<!-- DISPLAY NAVIGATION ON TOP/SIDE ONLY ON TABLETS (oim = only in medium) OR ON MONITORS (oil = only in large) -->
+<div class="row oim oil">
+    <ul class="nav col-12">
+        <li class="col-1">
+            <a href="#"><img src="static/img/house-icon.png" class="icon oil"> <span class="oim">Home</span> <span class="ois">Home</span>
+            </a>
+        </li>
+        <li class="col-2"><a href="#">Class Attendance</a>
+        </li>
+        <li class="col-2"><a href="#">Class Availability</a>
+        </li>
+        <li class="col-2"><a href="#">Faculty Schedule</a>
+        </li>
+        <li class="col-2"><a href="#">Class Schedule</a>
+        </li>
+        <li class="col-2"><a href="#">Reports</a>
+        </li>
+        <li class="col-1">
+            <a href="#"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Submit Daily Attendance</span> <span class="ois">Submit Daily Attendance</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<section class="row">
+    <div class="container col-12 col-m-8 big" >
+        <h1>IMPORTS</h1>
+        <span class="inline col-13 col-m-14 big">
+            <form method="post" enctype="multipart/form-data" >
+                <h1>Import Class</h1>
+                <input id="importFile" type="file" name="inputFile"/>
+                <input class = "button sp-form" type="button" value="submit" onclick="importClassesFromFile()" />
+            </form>
+
+            <form>
+                <input  type="text" id="urlId" />
+                <input class = "button sp-form" type="button" value="submit" onclick="importClassesFromURL()" />
+            </form>
+        </span>
+
+        <span class="inline col-13 col-m-14 big">
+            <form method="post" enctype="multipart/form-data" >
+                <h1>Import Instructor</h1>
+                <input id="importFile1" type="file" name="inputFile"/>
+                <input class = "button sp-form" type="button" value="submit" onclick="importInstructorsFromFile()" />
+            </form>
+
+            <form>
+                <input  type="text" id="urlId1" />
+                <input class = "button sp-form" type="button" value="submit" onclick="importInstructorsFromURL()" />
+            </form>
+        </span>
+        <span class="inline col-13 col-m-14 big">
+            <form  method="post" enctype="multipart/form-data" >
+                <h1>Import Schedule</h1>
+                <input id="importFile2" type="file" name="inputFile"/>
+                <input class = "button sp-form" type="button" value="submit" onclick="importSchedulesFromFile()" />
+            </form>
+
+            <form>
+                <input  type="text" id="urlId2" />
+                <input class = "button sp-form" type="button" value="submit" onclick="importSchedulesFromURL()" />
+            </form>
+        </span>
+
+        <div id="currentClassesID">
+
+        </div>
+
+        <p id="hiddenJson" hidden>
+        </p>
+    </div>
+</section>
+
+
+
+<!-- DISPLAY NAVIGATION IN THE BOTTOM (ois = only in small) ON PHONES -->
+<div class="row ois">
+    <ul class="nav col-12">
+        <li class="col-1">
+            <a href="#"><img src="static/img/house-icon.png" class="icon oil"> <span class="oim">Home</span> <span class="ois">Home</span>
+            </a>
+        </li>
+        <li class="col-2"><a href="#">Class Attendance</a>
+        </li>
+        <li class="col-2"><a href="#">Class Availability</a>
+        </li>
+        <li class="col-2"><a href="#">Faculty Schedule</a>
+        </li>
+        <li class="col-2"><a href="#">Class Schedule</a>
+        </li>
+        <li class="col-2"><a href="#">Reports</a>
+        </li>
+        <li class="col-1">
+            <a href="#"><img src="static/img/upload-icon.png" class="icon oil"> <span class="oim">Submit Daily Attendance</span> <span class="ois">Submit Daily Attendance</span>
+            </a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

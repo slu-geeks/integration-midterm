@@ -64,4 +64,10 @@
 		margin-top: initial;
 		margin-bottom: 1vh;
 	}
+	.inline{
+		display: inline-block;
+		padding:2vh ;
+		border:solid;
+		margin-bottom: 2px;
+	}
 }
