@@ -1,7 +1,8 @@
 {
   "schedules": [
     {
-      "PK_schedule_code": "3514",
+      "PK_schedule_code": "1",
+      "class_code" : "3514",
       "schedule_time_from": "17",
       "schedule_time_to": "18",
       "schedule_day": "Sunday",
@@ -10,7 +11,8 @@
       "FK_instructor_id": "1349"
     },
     {
-      "PK_schedule_code": "3513",
+      "PK_schedule_code": "2",
+      "class_code" : "3513",
       "schedule_time_from": "16",
       "schedule_time_to": "17",
       "schedule_day": "Sunday",
@@ -19,7 +21,8 @@
       "FK_instructor_id": "1349"
     },
     {
-      "PK_schedule_code": "3512",
+      "PK_schedule_code": "3",
+      "class_code" : "3512",
       "schedule_time_from": "15",
       "schedule_time_to": "16",
       "schedule_day": "Sunday",
@@ -28,7 +31,8 @@
       "FK_instructor_id": "1349"
     },
     {
-      "PK_schedule_code": "3515",
+      "PK_schedule_code": "4",
+      "class_code" : "3515",
       "schedule_time_from": "16",
       "schedule_time_to": "17",
       "schedule_day": "Monday",
@@ -37,7 +41,8 @@
       "FK_instructor_id": "1349"
     },
     {
-      "PK_schedule_code": "3516",
+      "PK_schedule_code": "5",
+      "class_code" : "3516",
       "schedule_time_from": "12",
       "schedule_time_to": "13",
       "schedule_day": "Sunday",
@@ -46,7 +51,8 @@
       "FK_instructor_id": "1350"
     },
     {
-      "PK_schedule_code": "3517",
+      "PK_schedule_code": "6",
+      "class_code" : "3516",
       "schedule_time_from": "13",
       "schedule_time_to": "14",
       "schedule_day": "Monday",
@@ -55,7 +61,8 @@
       "FK_instructor_id": "1350"
     },
     {
-      "PK_schedule_code": "3518",
+      "PK_schedule_code": "7",
+      "class_code" : "3518",
       "schedule_time_from": "12",
       "schedule_time_to": "13",
       "schedule_day": "Monday",
@@ -64,7 +71,8 @@
       "FK_instructor_id": "1350"
     },
     {
-      "PK_schedule_code": "3519",
+      "PK_schedule_code": "8",
+      "class_code" : "3519",
       "schedule_time_from": "09",
       "schedule_time_to": "10",
       "schedule_day": "Monday",
