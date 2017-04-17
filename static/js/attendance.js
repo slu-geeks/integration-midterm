@@ -5,9 +5,9 @@ function showAllAttendance() {
 
     document.getElementById("contentAttendance").innerHTML = "";
 
-    var dailyAttendanceFullList = createDailyAttendance();
+    let dailyAttendanceFullList = createDailyAttendance();
     dailyAttendanceFullList = sortAttendanceList(dailyAttendanceFullList);
-    var fullJson = createFullJson(dailyAttendanceFullList);
+    let fullJson = createFullJson(dailyAttendanceFullList);
 
     if (document.getElementById("checkBoxId").checked) {
         fillContent(fullJson);

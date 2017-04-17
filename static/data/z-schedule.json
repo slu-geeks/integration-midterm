@@ -1,47 +1,136 @@
 {
-  "schedule": [
+  "attendances": [
     {
-      "days" : "Monday",
-      "times" : "8:30 - 9:30",
-      "classes" : [
-        {
-          "classCode": "9423",
-          "subject" : "integLec",
-          "room": "s426",
-          "inNo": "1349",
-          "name": "Sir Ali"
+      "PK_attendance_id": "Mon Apr 17 2017 08:14:01 GMT+0800 (PHT)---3",
+      "attendance_date": "Mon Apr 17 2017 08:14:01 GMT+0800 (PHT)",
+      "attendance_state": "Present",
+      "FK_schedule_id": "4",
+      "schedule": {
+        "PK_schedule_code": "4",
+        "class_code": "3515",
+        "schedule_time_from": "16",
+        "schedule_time_to": "17",
+        "schedule_day": "Monday",
+        "schedule_subject": "Webtech",
+        "FK_class_id": "1",
+        "FK_instructor_id": "1356",
+        "instructor": {
+          "PK_instructor_idNo": "1356",
+          "instructor_name": "NANA, RIA ANDREA",
+          "picture_url": "static/img/faculties/NANA, RIA ANDREA.jpg",
+          "instructor_title": "Sr",
+          "educational_level": "Master of Computer Software",
+          "instructor_birthday": "1971-7-10",
+          "instructor_email": "Ria@gmail.com",
+          "instructor_phoneNum": "09064488410"
         },
-        {
-          "classCode": "9413",
-          "subject" : "Networks",
-          "room": "s527",
-          "inNo": "1425",
-          "name": "Sir Famorca"
+        "class": {
+          "PK_class_id": "1",
+          "room_no": "s426",
+          "instructor_id": "1349",
+          "loc_X": "10",
+          "loc_Y": "30"
         }
-      ],
-      "times": "1:00 - 2:00" ,
-      "classes" : [
-        {
-          "classCode": "9426",
-          "subject" : "web-techLec",
-          "room": "s326",
-          "inNo": "1320",
-          "name": "Sir Montes"
+      }
+    },
+    {
+      "PK_attendance_id": "Mon Apr 17 2017 08:14:01 GMT+0800 (PHT)---5",
+      "attendance_date": "Mon Apr 17 2017 08:14:01 GMT+0800 (PHT)",
+      "attendance_state": "Absent",
+      "FK_schedule_id": "6",
+      "schedule": {
+        "PK_schedule_code": "6",
+        "class_code": "3516",
+        "schedule_time_from": "13",
+        "schedule_time_to": "14",
+        "schedule_day": "Monday",
+        "schedule_subject": "Webtech",
+        "FK_class_id": "2",
+        "FK_instructor_id": "1354",
+        "instructor": {
+          "PK_instructor_idNo": "1354",
+          "instructor_name": "Para, Jeff",
+          "picture_url": "static/img/faculties/PARA, JEFF.jpg",
+          "instructor_title": "Sr",
+          "educational_level": "Master of Computer Systems",
+          "instructor_birthday": "1972-11-10",
+          "instructor_email": "pJeff@gmail.com",
+          "instructor_phoneNum": "09064444192"
+        },
+        "class": {
+          "PK_class_id": "2",
+          "room_no": "s427",
+          "instructor_id": "1350",
+          "loc_X": "20",
+          "loc_Y": "40"
         }
-      ]
-    },{
-      "days" : "Wednesday",
-      "times " : "3:00 - 4:00" ,
-      "classes":[
-        {
-          "classCode": "9413",
-          "subject" : "Tech Press",
-          "room": "s426",
-          "inNo": "1369",
-          "name": "Maam Mendoza"
+      }
+    },
+    {
+      "PK_attendance_id": "Mon Apr 17 2017 08:14:01 GMT+0800 (PHT)---6",
+      "attendance_date": "Mon Apr 17 2017 08:14:01 GMT+0800 (PHT)",
+      "attendance_state": "Late",
+      "FK_schedule_id": "7",
+      "schedule": {
+        "PK_schedule_code": "7",
+        "class_code": "3518",
+        "schedule_time_from": "12",
+        "schedule_time_to": "13",
+        "schedule_day": "Monday",
+        "schedule_subject": "Webtech",
+        "FK_class_id": "2",
+        "FK_instructor_id": "1352",
+        "instructor": {
+          "PK_instructor_idNo": "1352",
+          "instructor_name": "Balmeo, Laurence",
+          "picture_url": "static/img/faculties/BALMEO, LAURENCE.jpg",
+          "instructor_title": "Sr",
+          "educational_level": "Master of Computer Systems",
+          "instructor_birthday": "1975-10-9",
+          "instructor_email": "lbalmeo@gmail.com",
+          "instructor_phoneNum": "093669013"
+        },
+        "class": {
+          "PK_class_id": "2",
+          "room_no": "s427",
+          "instructor_id": "1350",
+          "loc_X": "20",
+          "loc_Y": "40"
         }
-        ]
+      }
+    },
+    {
+      "PK_attendance_id": "Mon Apr 17 2017 08:14:01 GMT+0800 (PHT)---8",
+      "attendance_date": "Mon Apr 17 2017 08:14:01 GMT+0800 (PHT)",
+      "attendance_state": "Late",
+      "FK_schedule_id": "8",
+      "schedule": {
+        "PK_schedule_code": "8",
+        "class_code": "3519",
+        "schedule_time_from": "09",
+        "schedule_time_to": "10",
+        "schedule_day": "Monday",
+        "schedule_subject": "Webtech",
+        "FK_class_id": "2",
+        "FK_instructor_id": "1351",
+        "instructor": {
+          "PK_instructor_idNo": "1351",
+          "instructor_name": "Bacani, Bench",
+          "picture_url": "static/img/faculties/BACANI, BENCH.jpg",
+          "instructor_title": "Sr",
+          "educational_level": "Master of Computer Systems",
+          "instructor_birthday": "1974-11-10",
+          "instructor_email": "bbacani@gmail.com",
+          "instructor_phoneNum": "09366381497"
+        },
+        "class": {
+          "PK_class_id": "2",
+          "room_no": "s427",
+          "instructor_id": "1350",
+          "loc_X": "20",
+          "loc_Y": "40"
+        }
+      }
     }
-
   ]
 }

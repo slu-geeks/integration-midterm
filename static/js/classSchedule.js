@@ -11,6 +11,15 @@ function getClassSchedule() {
     let allScheduleJsonStr = localStorage.getItem("allSchedulesJson");
     let allScheduleJsonObject = JSON.parse(allScheduleJsonStr);
     let allSelectedSchedules = JSON.parse('{"schedules" : []}');
+
+    let mainDoc = document.getElementById("classScheduleId");
+
+    //add subject name
+    let subjectName = allScheduleJsonObject.schedules[0].schedule_subject;
+    let caption  = document.getElementsByClassName("subjectClassCaption")[0];
+    caption.setAttribute("style", "font-size:60px; !importantl");
+    caption.innerText = subjectName;
+
     for (let index in allScheduleJsonObject.schedules) {
         let eachSchedule = allScheduleJsonObject.schedules[index];
         if (eachSchedule.class_code == classCodeNumber) {
@@ -19,7 +28,6 @@ function getClassSchedule() {
     }
 
     allSelectedSchedules['schedules'].sort(sortByTime);
-    let mainDoc = document.getElementById("classScheduleId")
     let contentElement = mainDoc.cloneNode(true);
     let instructorId = allSelectedSchedules.schedules[0].FK_instructor_id;
 
