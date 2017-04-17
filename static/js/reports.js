@@ -1,47 +1,38 @@
 /**
+ * Created by mehdi on 4/17/17.
+ */
+
+/**
  * Created by mehdi on 4/14/17.
  */
-function showAllAttendance() {
+function showAllReports() {
 
     document.getElementById("contentAttendance").innerHTML = "";
-
-    var dailyAttendanceFullList = createDailyAttendance();
-    dailyAttendanceFullList = sortAttendanceList(dailyAttendanceFullList);
-    var fullJson = createFullJson(dailyAttendanceFullList);
-
-    if (document.getElementById("checkBoxId").checked) {
-        fillContent(fullJson);
-    } else {
-        /**
-         * When the checker open the app, based on his/her current time
-         * the classes going on in that period will be sub list by the function below
-         */
-        let subDayAttendance = subAttendanceBasedOnCurrentTime(fullJson);
-        fillContent(subDayAttendance);
+    let givenDate = document.getElementById("dateTimeId").value;
+    let parsedDateArray = givenDate.split("-");
+    if (parsedDateArray.length != 3) {
+        alert("you must send your date in write format!");
+        return;
     }
-}
+    let dateAttendance = getDateAttendance(parsedDateArray[0], parsedDateArray[1], parsedDateArray[2]);
 
-function subAttendanceBasedOnCurrentTime(attendanceFullJson) {
-
-    let currentDate = new Date();
-    let currentTime = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
-
-
-    let subListAttendance = JSON.parse('{"attendances": []}');
-
-    for (let index in attendanceFullJson.attendances) {
-        let eachAttendance = attendanceFullJson.attendances[index];
-        let eachSchedule = eachAttendance.schedule;
-
-        let startTime = getTime(eachSchedule.schedule_time_from);
-        let endTime = getTime(eachSchedule.schedule_time_to);
-
-        if (currentTime > startTime && currentTime < endTime) {
-            subListAttendance['attendances'].push(eachAttendance);
-        }
+    if(dateAttendance == null){
+        alert("there is no registered attendance for " + givenDate);
+        return;
     }
+    dateAttendance = sortAttendanceList(dateAttendance);
+    let fullJson = createFullJson(dateAttendance);
 
-    return subListAttendance;
+    let dataClass = document.getElementById("dataClassId");
+    dataClass.innerHTML = "";
+    let anchorElement = document.createElement("a");
+    anchorElement.alt = "download";
+    anchorElement.href = "data:text/plainText," + JSON.stringify(fullJson, null, 4);
+    anchorElement.setAttribute("download", true);
+    anchorElement.appendChild(document.createTextNode("DOWNLOAD"));
+    dataClass.appendChild(anchorElement);
+
+    fillContent(fullJson);
 }
 
 function getTime(strTime) {
@@ -92,22 +83,14 @@ function fillContent(attendanceFullJson) {
         // attendanceDate.getHours() + ":" + attendanceDate.getMinutes()
         timeElement.appendChild(document.createTextNode(eachSchedule.schedule_time_from + " to " + eachSchedule.schedule_time_to));
         allAttendances.push(contentElement);
-
-
-        let submitElement = contentElement.getElementsByClassName("submitAttendanceClass")[0];
-        submitElement.dataset.attendanceId = eachAttendance.PK_attendance_id;
+        
 
         contentElement.setAttribute("id", eachAttendance.PK_attendance_id);
 
-        let mySelect = contentElement.getElementsByClassName("selectFormClass")[0];
+        let attendanceState = contentElement.getElementsByClassName("attendanceStateClass")[0];
 
+        attendanceState.appendChild(document.createTextNode(eachAttendance.attendance_state));
 
-        for(let i = 0; i < mySelect.options.length; i++){
-            if(mySelect.options[i].value == eachAttendance.attendance_state){
-                mySelect.selectedIndex = i;
-                break;
-            }
-        }
     }
 
     for (let index in allAttendances) {
@@ -117,119 +100,15 @@ function fillContent(attendanceFullJson) {
 }
 
 
-function submitAttendance(attendance) {
-
-    let newDate = new Date();
-    let dailyScheduleName = newDate.getFullYear() + "-" + newDate.getMonth() + "-" + newDate.getDate();
-
-    let attendanceId = attendance.getAttribute("data-attendance-id");
-
-    let dayAttendanceJsonStr = localStorage.getItem(dailyScheduleName);
-    let dayAttendanceJsonObject = JSON.parse(dayAttendanceJsonStr);
-
-    for (let index in dayAttendanceJsonObject.attendances) {
-        let eachAttendance = dayAttendanceJsonObject.attendances[index];
-        let eachAttendanceIdNo = eachAttendance.PK_attendance_id;
-
-        if (attendanceId == eachAttendanceIdNo) {
-            let mainSelection = document.getElementById(attendanceId);
-            let selectElement = mainSelection.getElementsByClassName("selectFormClass")[0];
-            let text = selectElement.options[selectElement.selectedIndex].text;
-
-            eachAttendance.attendance_state = text;
-            alert("you successfully change the state to: " + text);
-            let strJson = JSON.stringify(dayAttendanceJsonObject, null, 4);
-            localStorage.setItem(dailyScheduleName, strJson);
-            return;
-        }
-    }
-}
-
-
-function createDailyAttendance() {
-    let newDate = new Date();
-    let year = newDate.getFullYear();
-    let month = newDate.getMonth();
-    let day = newDate.getDate();
-    let weekDay = newDate.getDay();
-
-
-    let dailyScheduleName = year + "-" + month + "-" + day;
-
-
+function getDateAttendance(year, month, day) {
+    let dailyScheduleName = year + "-" + (parseInt(month)-1) + "-" + day;
     let dayAttendanceJsonStr = localStorage.getItem(dailyScheduleName);
 
     if (dayAttendanceJsonStr != null && dayAttendanceJsonStr != undefined) {
         return JSON.parse(dayAttendanceJsonStr);
     }
 
-    //create daily attendance on the fly since it's not yet existing
-    let allSchedulesStr = localStorage.getItem("allSchedulesJson");
-    let allSchedulesObject = JSON.parse(allSchedulesStr);
-
-
-    let dayAttendanceJsonObject = JSON.parse('{"attendances": []}');
-
-    for (let index in allSchedulesObject.schedules) {
-        let eachSchedule = allSchedulesObject.schedules[index];
-        let scheduleDay = getDayNumber(eachSchedule.schedule_day);
-
-        if (scheduleDay == weekDay) {
-            let jsonString = "";
-            jsonString = jsonString.concat('{"PK_attendance_id": "' + newDate + '---' + index + '",');
-            jsonString = jsonString.concat('"attendance_date": "' + newDate + '",');
-            jsonString = jsonString.concat('"attendance_state": "NOT_CHECKED",');
-            jsonString = jsonString.concat('"FK_schedule_id": "' + eachSchedule.PK_schedule_code + '"}');
-            dayAttendanceJsonObject['attendances'].push(JSON.parse(jsonString));
-        }
-    }
-
-    let dailyAttendanceStrList = JSON.stringify(dayAttendanceJsonObject, null, 4);
-    localStorage.setItem(dailyScheduleName, dailyAttendanceStrList);
-
-    /*
-
-     json from and to object
-     var dateStr = JSON.parse(json);
-     console.log(dateStr); // 2014-01-01T23:28:56.782Z
-
-     var date = new Date(dateStr);
-     console.log(date);  // Wed Jan 01 2014 13:28:56 GMT-1000 (Hawaiian Standard Time)
-     */
-
-    return dayAttendanceJsonObject;
-
-
-    function getDayNumber(day) {
-        let dayLowerCase = day.toLowerCase();
-        let dayNumber = -1;
-        switch (dayLowerCase) {
-            case "sunday":
-                dayNumber = 0;
-                break;
-            case "monday":
-                dayNumber = 1;
-                break;
-            case "tuesday":
-                dayNumber = 2;
-                break;
-            case "wednesday":
-                dayNumber = 3;
-                break;
-            case "thursday":
-                dayNumber = 4;
-                break;
-            case "friday":
-                dayNumber = 5;
-                break;
-            case "saturday":
-                dayNumber = 6;
-                break;
-            default:
-                alert("Error: " + dayLowerCase + " is not a correct day in your schedule json file");
-        }
-        return dayNumber;
-    }
+    return null;
 }
 
 function sortAttendanceList(attendanceList) {

@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Attendance</title>
+    <title>Reports</title>
     <link rel="stylesheet" href="static/css/index-small.css" type="text/css"/>
     <link rel="stylesheet" href="static/css/index-medium.css" type="text/css"/>
     <link rel="stylesheet" href="static/css/index-large.css" type="text/css"/>
     <link rel="stylesheet" href="static/css/responsive.css" type="text/css"/>
     <link rel="stylesheet" href="static/css/design.css" type="text/css"/>
 
-    <script type="text/javascript" src="static/js/attendance.js"></script>
+    <script type="text/javascript" src="static/js/reports.js"></script>
 </head>
 <body>
 <!-- DISPLAY NAVIGATION ON TOP/SIDE ONLY ON TABLETS (oim = only in medium) OR ON MONITORS (oil = only in large) -->
@@ -39,9 +39,9 @@
 <section class="row">
     <div class="container col-12 col-m-8 big">
         <form>
-            <p>See all daily schedules?&nbsp;<input id="checkBoxId" type="checkbox"/></p>
-
-            <input class="button sp-form" type="button" value="Show" onclick="showAllAttendance()"/>
+            <p>Date: <input id="dateTimeId" type="date" placeholder="yyyy-mm-dd"/></p>
+            <p><input class="button sp-form" type="button" value="Show" onclick="showAllReports()"/></p>
+            <p id="dataClassId"></p>
         </form>
     </div>
 </section>
@@ -54,7 +54,6 @@
             <div class="col-4" style="margin : 10px 20px 0px 20px !important; float: left;">
                 <img class="thumbnailClass" src="" width=100vw alt="">
                 <h1 class="infoClass"></h1>
-                <button data-attendance-id="" name="submit" onclick="submitAttendance(this)" class="form button submitAttendanceClass">Submit</button>
             </div>
             <table class="col-7 col-m-12">
                 <thead>
@@ -88,18 +87,9 @@
 
                 <tr>
                     <th>Attendance State</th>
-                    <td>
-                        <select name="Subject" class = "sp-form selectFormClass">
-                            <option selected = "selected" value="Not checked">Not checked</option>
-                            <option value="Absent">Absent</option>
-                            <option value="Present">Present</option>
-                            <option value="Late">Late</option>
-                        </select>
-                    </td>
-
+                    <td class="attendanceStateClass">
                     </td>
                 </tr>
-                </thead>
             </table>
 
         </div>
