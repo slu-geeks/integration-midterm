@@ -1,0 +1,49 @@
+{
+  "department_classes": [
+    {
+      "room_no": "s326"
+    },
+    {
+      "room_no": "s425"
+    },
+    {
+      "room_no": "s426"
+    },
+    {
+      "room_no": "s427"
+    },
+    {
+      "room_no": "s421"
+    },
+    {
+      "room_no": "s422"
+    },
+    {
+      "room_no": "s423"
+    },
+    {
+      "room_no": "s525"
+    },
+    {
+      "room_no": "s526"
+    },
+    {
+      "room_no": "s527"
+    },
+    {
+      "room_no": "s528"
+    },
+    {
+      "room_no": "s521"
+    },
+    {
+      "room_no": "s522"
+    },
+    {
+      "room_no": "s523"
+    },
+    {
+      "room_no": "s524"
+    }
+  ]
+}

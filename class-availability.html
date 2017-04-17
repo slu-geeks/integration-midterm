@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="static/css/index-large.css" type="text/css"/>
     <link rel="stylesheet" href="static/css/responsive.css" type="text/css"/>
     <link rel="stylesheet" href="static/css/design.css" type="text/css"/>
-    <link href='//fonts.googleapis.com/css?family=Pangolin' rel='stylesheet'>
+    <!--<link href='//fonts.googleapis.com/css?family=Pangolin' rel='stylesheet'>-->
+
+    <script src="static/js/classAvailability.js"></script>
 
 
 </head>
@@ -51,11 +53,30 @@
     <!-- SECTION FOR 3RD FLOOR MAPPING-->
     <section class="row">
         <div class="container col-12 col-m-8">
+            <div>
+                <p>Do you want to see the whole available room for today ?<input id="checkBoxId" type="checkbox" onchange="classAvail()"/></p>
+            </div>
+            <section id="classesId" >
 
+            </section>
         </div>
     </section>
 </section>
 
+
+<form id="formElementImportClasses" method="post" enctype="multipart/form-data" hidden>
+    <h1>Import all Classes</h1>
+    <input class="importFileClass" type="file" name="inputFile"/>
+    <input class = "button sp-form" type="button" value="submit" onclick="importClassesFromFile()" />
+</form>
+
+
+<section id="classScheduleId" class="row" hidden>
+    <div class="container col-12 col-m-8">
+        <div class="header">
+
+        </div>
+</section>
 
 </body>
 
